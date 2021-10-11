@@ -1,0 +1,45 @@
+@import "./../../../assets/styles/style.scss";
+
+.cardWrapper {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 23.688rem;
+  margin: 2rem 22rem;
+  font-family: $font;
+  .avatar {
+    width: 7.75rem;
+    height: 7.75rem;
+    background-image: url("./../../../assets/img/walter.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .personContent {
+    padding-left: 1.25rem;
+    box-shadow: 0px 0.25rem 0.5rem $shadowColor;
+    border-radius: 0.25rem;
+    width: calc(100% - 7.75rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 7.75rem;
+    .status {
+      color: $statusColorOne;
+      background-color: $statusBackgroundColor;
+      padding: 0.5rem 0.75rem;
+      width: 4rem;
+      text-align: center;
+      margin-bottom: 0.75rem;
+      letter-spacing: 0.063rem;
+      font-variant: small-caps;
+    }
+    .name {
+      font-size: 1.5rem;
+      margin-bottom: 0.75rem;
+    }
+    .data {
+      color: $dataColorText;
+      opacity: 0.4;
+    }
+  }
+}
