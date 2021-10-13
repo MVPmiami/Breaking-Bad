@@ -5,41 +5,55 @@
   justify-content: flex-start;
   align-items: center;
   width: 23.688rem;
-  margin: 2rem 22rem;
-  font-family: $font;
+  font-family: "Roboto";
   .avatar {
     width: 7.75rem;
     height: 7.75rem;
     background-image: url("./../../../assets/img/walter.png");
+    border-radius: 0.25rem 0 0 0.25rem;
     background-repeat: no-repeat;
     background-size: cover;
   }
   .personContent {
-    padding-left: 1.25rem;
-    box-shadow: 0px 0.25rem 0.5rem $shadowColor;
+    padding: 0 1.25rem;
+    box-shadow: 0px 0.25rem 0.5rem $shadow;
     border-radius: 0.25rem;
-    width: calc(100% - 7.75rem);
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     height: 7.75rem;
     .status {
-      color: $statusColorOne;
-      background-color: $statusBackgroundColor;
-      padding: 0.5rem 0.75rem;
-      width: 4rem;
-      text-align: center;
-      margin-bottom: 0.75rem;
-      letter-spacing: 0.063rem;
-      font-variant: small-caps;
+      @include status($statusText, $statusBcg);
     }
     .name {
       font-size: 1.5rem;
       margin-bottom: 0.75rem;
     }
     .data {
-      color: $dataColorText;
+      color: $dataText;
       opacity: 0.4;
+    }
+  }
+}
+@media (max-width: 400px) {
+  .cardWrapper {
+    width: 5.75rem;
+    flex-direction: column;
+    .avatar {
+      width: 5.75rem;
+      height: 5.75rem;
+    }
+    .personContent {
+      padding:0 0.75rem;
+      width: 5.75rem;
+      justify-content: center;
+      align-items: center;
+      .name {
+        font-size: 1rem;
+        text-align: center;
+        margin-bottom: 0.75rem;
+      }
     }
   }
 }

@@ -1,5 +1,14 @@
-$font: "Roboto";
-$statusColorOne: #51e245;
-$dataColorText: #2d2d2d;
-$statusBackgroundColor: #d6ffd2;
-$shadowColor: #0000000a;
+$statusText: #51e245;
+$dataText: #2d2d2d;
+$statusBcg: #d6ffd2;
+$shadow: #0000000a;
+
+@mixin status($statusText, $statusBcg) {
+  color: $statusText;
+  background-color: $statusBcg;
+  padding: 0.5rem 0.75rem;
+  text-align: center;
+  margin-bottom: 0.75rem;
+  letter-spacing: 0.063rem;
+  font-variant: small-caps;
+}

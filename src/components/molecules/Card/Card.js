@@ -1,6 +1,6 @@
 import styles from "./card.module.scss";
 
-function Card() {
+const Card = () => {
   return (
     <div>
       <div className={styles.cardWrapper}>
@@ -13,6 +13,6 @@ function Card() {
       </div>
     </div>
   );
-}
+};
 
 export default Card;
