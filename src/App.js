@@ -1,5 +1,4 @@
-import "./App.css";
-import Card from "./components/molecules/Card/Card.js";
+import Card from "./components/molecules/Card/";
 
 function App() {
   return (

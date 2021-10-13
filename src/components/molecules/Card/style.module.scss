@@ -9,44 +9,37 @@
   .avatar {
     width: 7.75rem;
     height: 7.75rem;
-    background-image: url("./../../../assets/img/walter.png");
     border-radius: 0.25rem 0 0 0.25rem;
-    background-repeat: no-repeat;
-    background-size: cover;
   }
   .personContent {
-    padding: 0 1.25rem;
+    padding: 0 1.5rem;
     box-shadow: 0px 0.25rem 0.5rem $shadow;
-    border-radius: 0.25rem;
+    border-radius: 0 0.25rem 0.25rem 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     height: 7.75rem;
+    width: 15.938rem;
     .status {
       @include status($statusText, $statusBcg);
     }
     .name {
-      font-size: 1.5rem;
       margin-bottom: 0.75rem;
     }
     .data {
       color: $dataText;
+      font-size: 0.75rem;
       opacity: 0.4;
     }
   }
 }
 @media (max-width: 400px) {
   .cardWrapper {
-    width: 5.75rem;
-    flex-direction: column;
-    .avatar {
-      width: 5.75rem;
-      height: 5.75rem;
-    }
+    width: 19rem;
     .personContent {
-      padding:0 0.75rem;
-      width: 5.75rem;
+      padding: 0 0.75rem;
+      width: 7.75rem;
       justify-content: center;
       align-items: center;
       .name {
