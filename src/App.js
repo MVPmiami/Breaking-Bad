@@ -1,9 +1,9 @@
-import Card from "./components/molecules/Card/";
+import CardList from "./components/organisms/CardList";
 
 function App() {
   return (
     <div>
-      <Card />
+      <CardList />
     </div>
   );
 }
