@@ -1,7 +1,11 @@
-import "./App.css";
+import Card from "./components/molecules/Card/";
 
 function App() {
-  return <div>лол</div>;
+  return (
+    <div>
+      <Card />
+    </div>
+  );
 }
 
 export default App;
