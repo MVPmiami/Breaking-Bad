@@ -49,11 +49,7 @@ const CardList = () => {
       status={card.status}
     />
   ));
-  return (
-    <div>
-      <ul className={styles.cardList}>{cardsList}</ul>
-    </div>
-  );
+  return <div className={styles.cardList}>{cardsList}</div>;
 };
 
 export default CardList;

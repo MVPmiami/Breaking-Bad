@@ -1,9 +1,30 @@
 @import "./../../../assets/styles/style.scss";
 
+body {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .cardList {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 1rem;
-  width: 80%;
+  width: 74.563rem;
   margin: 5rem auto;
+  @media (max-width: 1215px) {
+    width: 49rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media (max-width: 810px) {
+    width: 24rem;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  @media (max-width: 420px) {
+    width: 17rem;
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
