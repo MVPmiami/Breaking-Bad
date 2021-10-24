@@ -4,7 +4,7 @@ import Card from "./../../molecules/Card/";
 const CardList = ({ persons }) => {
   const cardsList = persons.map((person) => (
     <Card
-      key={person.id}
+      key={person.char_id}
       name={person.name}
       birthday={person.birthday}
       img={person.img}
