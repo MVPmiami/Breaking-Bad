@@ -1,7 +1,9 @@
 import styles from "./style.module.scss";
 import Card from "./../../molecules/Card/";
+import ErrorMessage from "../../atoms/Error";
+import Loader from "./../../atoms/Loader";
 
-const CardList = ({ persons }) => {
+const CardList = ({ persons, isLoader, isError }) => {
   const cardsList = persons.map((person) => (
     <Card
       key={person.char_id}
@@ -11,7 +13,17 @@ const CardList = ({ persons }) => {
       status={person.status}
     />
   ));
-  return <div className={styles.cardList}>{cardsList}</div>;
+  return (
+    <div>
+      {isError ? (
+        <ErrorMessage messege="We have some problems dude!" />
+      ) : !isLoader ? (
+        <div className={styles.cardList}>{cardsList}</div>
+      ) : (
+        <Loader />
+      )}
+    </div>
+  );
 };
 
 export default CardList;
