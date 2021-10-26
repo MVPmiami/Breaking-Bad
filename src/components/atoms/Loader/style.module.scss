@@ -1,0 +1,58 @@
+@import "../../../assets/styles/variables.scss";
+
+.ldsEllipsis {
+  display: inline-block;
+  position: relative;
+  width: 5rem;
+  height: 5rem;
+  margin-top: 5rem;
+}
+.ldsEllipsis div {
+  position: absolute;
+  top: 2.063rem;
+  width: 1.25rem;
+  height: 1.25rem;
+  border-radius: 50%;
+  background: $statusText;
+  animation-timing-function: cubic-bezier(0, 1, 1, 0);
+}
+.ldsEllipsis div:nth-child(1) {
+  left: 0.5rem;
+  animation: ldsEllipsis1 0.6s infinite;
+}
+.ldsEllipsis div:nth-child(2) {
+  left: 0.5rem;
+  animation: ldsEllipsis2 0.6s infinite;
+}
+.ldsEllipsis div:nth-child(3) {
+  left: 2rem;
+  animation: ldsEllipsis2 0.6s infinite;
+}
+.ldsEllipsis div:nth-child(4) {
+  left: 3.5rem;
+  animation: ldsEllipsis3 0.6s infinite;
+}
+@keyframes ldsEllipsis1 {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes ldsEllipsis3 {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+@keyframes ldsEllipsis2 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(1.5rem, 0);
+  }
+}
