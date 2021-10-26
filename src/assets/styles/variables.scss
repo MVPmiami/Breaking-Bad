@@ -2,6 +2,8 @@ $statusText: #51e245;
 $dataText: #2d2d2d;
 $statusBcg: #d6ffd2;
 $shadow: #0000000a;
+$errorText: rgb(240, 227, 227);
+$errorBcg: #9c1e1e;
 
 @mixin status($statusText, $statusBcg) {
   color: $statusText;

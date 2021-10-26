@@ -20,9 +20,9 @@ export const getErrorWhenUpload = (value) => ({
 });
 
 export const loadPersonList = () => async (dispatch) => {
-	dispatch(changeStatusForLoader(true));
+  dispatch(changeStatusForLoader(true));
   const { value, error } = await Repository.APICardsList.getCardList();
   error || !value
     ? dispatch(getErrorWhenUpload(true))
-    : dispatch(getPersonsList(value),dispatch(changeStatusForLoader(true)));
+    : dispatch(getPersonsList(value), dispatch(changeStatusForLoader(false)));
 };

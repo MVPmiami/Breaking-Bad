@@ -1,20 +1,19 @@
 @import "../../../assets/styles/variables.scss";
 
 .errorMessage {
-  width: 50%;
-  position: absolute;
-  top: 5rem;
-  left: 25%;
+  width: 30rem;
   padding: 2rem 1rem;
+  margin-top: 5rem;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 1.8rem;
   font-weight: bold;
-  background-color: rgb(165, 41, 19);
+  background-color: $errorBcg;
   border-radius: 2rem;
-  color: white;
+  color: $errorText;
   @media (max-width: 747px) {
-    left: 20%;
+    width: 16rem;
+    font-size: 1.2rem;
   }
 }

@@ -26,7 +26,7 @@ function cardListReducer(state = initialState, action) {
     case CHANGE_STATUS_LOADER:
       return {
         ...state,
-        isLoading: action.payload,
+        isLoader: action.payload,
       };
     default:
       return state;

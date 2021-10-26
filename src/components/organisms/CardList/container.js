@@ -8,6 +8,7 @@ export const PersonsListContainer = () => {
   const persons = useSelector((state) => state.cardListReducer.cardList);
   const isError = useSelector((state) => state.cardListReducer.isError);
   const isLoader = useSelector((state) => state.cardListReducer.isLoader);
+
   useEffect(() => {
     dispatch(loadPersonList());
   }, [dispatch]);
