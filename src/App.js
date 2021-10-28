@@ -1,4 +1,3 @@
-import CardList from "./components/organisms/CardList";
 import Home from "./components/pages/Home/";
 import Person from "./components/pages/Person";
 import Catalog from "./components/pages/Catalog";
