@@ -1,7 +1,7 @@
 import CardList from "./components/organisms/CardList";
 import Home from "./components/pages/Home/";
-import CurrentPerson from "./components/pages/CurrentPerson/";
-import PersonList from "./components/pages/PersonList/";
+import Person from "./components/pages/Person";
+import Catalog from "./components/pages/Catalog";
 import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
 
 function App() {
@@ -9,10 +9,9 @@ function App() {
     <BrowserRouter>
       <div>
         <Switch>
-          <Route exact path="/" component={CardList} />
-          <Route path="/Home" component={Home} />
-          <Route path="/CurrentPerson" component={CurrentPerson} />
-          <Route path="/PersonList" component={PersonList} />
+          <Route exact path="/" component={Home} />
+          <Route path="/person" component={Person} />
+          <Route path="/catalog" component={Catalog} />
           <Redirect to="/" />
         </Switch>
       </div>
