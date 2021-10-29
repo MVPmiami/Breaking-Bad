@@ -24,5 +24,9 @@ export const loadPersonList = () => async (dispatch) => {
   const { value, error } = await Repository.APICardsList.getCardList();
   error || !value
     ? dispatch(getErrorWhenUpload(true))
-    : dispatch(getPersonsList(value), dispatch(changeStatusForLoader(false)));
+    : dispatch(
+        getPersonsList(value),
+        dispatch(changeStatusForLoader(false)),
+        localStorage.setItem("cardList", JSON.stringify(value))
+      );
 };
