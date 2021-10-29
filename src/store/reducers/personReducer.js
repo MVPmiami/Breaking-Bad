@@ -5,7 +5,7 @@ import {
 } from "../actionTypes/exportActions";
 
 const initialState = {
-  cardList: JSON.parse(localStorage.getItem("cardList")) || [],
+  cardList: [],
   isLoader: false,
   isError: false,
 };

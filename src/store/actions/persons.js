@@ -26,7 +26,6 @@ export const loadPersonList = () => async (dispatch) => {
     ? dispatch(getErrorWhenUpload(true))
     : dispatch(
         getPersonsList(value),
-        dispatch(changeStatusForLoader(false)),
-        localStorage.setItem("cardList", JSON.stringify(value))
+        dispatch(changeStatusForLoader(false))
       );
 };

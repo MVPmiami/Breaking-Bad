@@ -1,20 +1,21 @@
-import React from "react";
-import { useSelector } from "react-redux";
+import React, { useEffect } from "react";
+import { useSelector, useDispatch } from "react-redux";
 import { useParams } from "react-router-dom";
 import FullCard from "./component";
-import ErrorMessage from "./../../atoms/Error";
+import Loader from "./../../atoms/Loader";
+import { loadPersonList } from "./../../../store/actions/persons";
 
 export const PersonFullCardContainer = () => {
-  const { id } = useParams();
+  const dispatch = useDispatch();
   let person = null;
+  useEffect(() => {
+    dispatch(loadPersonList());
+  }, [dispatch]);
+  const { id } = useParams();
   const persons = useSelector((state) => state.cardListReducer.cardList);
   person = persons.filter((pers) => String(pers.char_id) === id)[0];
 
-  return person ? (
-    <FullCard person={person} />
-  ) : (
-    <ErrorMessage messege={"person not found"} />
-  );
+  return person ? <FullCard person={person} /> : <Loader />;
 };
 
 export const container = PersonFullCardContainer;
