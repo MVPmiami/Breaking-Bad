@@ -2,20 +2,20 @@ import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { useParams } from "react-router-dom";
 import FullCard from "./component";
-import Loader from "./../../atoms/Loader";
-import { loadPersonList } from "./../../../store/actions/persons";
+import { loadPersonById } from "./../../../store/actions/persons";
 
 export const PersonFullCardContainer = () => {
   const dispatch = useDispatch();
-  let person = null;
-  useEffect(() => {
-    dispatch(loadPersonList());
-  }, [dispatch]);
   const { id } = useParams();
-  const persons = useSelector((state) => state.cardListReducer.cardList);
-  person = persons.filter((pers) => String(pers.char_id) === id)[0];
+  const person = useSelector((state) => state.cardListReducer.currentPerson);
+  const isError = useSelector((state) => state.cardListReducer.isError);
+  const isLoader = useSelector((state) => state.cardListReducer.isLoader);
 
-  return person ? <FullCard person={person} /> : <Loader />;
+  useEffect(() => {
+    dispatch(loadPersonById(id));
+  }, [dispatch]);
+
+  return <FullCard person={person} isError={isError} isLoader={isLoader} />;
 };
 
 export const container = PersonFullCardContainer;
