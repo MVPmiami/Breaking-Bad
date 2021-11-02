@@ -6,7 +6,7 @@ const Person = ({ cleanPerson }) => {
   return (
     <div className={styles.currentPage}>
       <Link to={"/catalog"} className={styles.linkToCatalog}>
-        <div className={styles.arrowBack} onClick={cleanPerson}></div>
+        <div className={styles.arrowBack} onClick={cleanPerson()}></div>
         <p>Back to Catalog</p>
       </Link>
       <FullCard />

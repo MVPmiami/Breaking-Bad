@@ -6,7 +6,7 @@ import { cleanCurrentPerson } from "./../../../store/actions/persons";
 export const PersonPageContainer = () => {
   const dispatch = useDispatch();
   const cleanPerson = () => {
-    dispatch(cleanCurrentPerson);
+    dispatch(cleanCurrentPerson());
   };
 
   return <Person cleanPerson={cleanPerson} />;

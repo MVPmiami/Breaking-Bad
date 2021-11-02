@@ -4,8 +4,8 @@ import {
   CHANGE_STATUS_LOADER,
   LOAD_CURRENT_PERSON,
   CHANGE_STATUS_LOADER_CURRENT_PERSON,
-	GET_ERROR_WHEN_UPLOAD_CURRENT_PERSON,
-	CLEAN_CURRENT_PERSON
+  GET_ERROR_WHEN_UPLOAD_CURRENT_PERSON,
+  CLEAN_CURRENT_PERSON,
 } from "./../actionTypes/exportActions";
 import Repository from "../../repository";
 
@@ -51,6 +51,7 @@ export const cleanCurrentPerson = () => ({
 
 export const loadPersonById = (id) => async (dispatch) => {
   dispatch(changeStatusForLoaderCurrentPerson(true));
+  dispatch(getErrorWhenUploadCurrentPerson(false));
   const { value, error } = await Repository.APICurrentPerson.getCurrentPerson(
     id
   );
