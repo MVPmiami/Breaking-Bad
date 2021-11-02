@@ -3,9 +3,6 @@ import ErrorMessage from "../../atoms/Error";
 import Loader from "../../atoms/Loader";
 
 const FullCard = ({ person, isLoader, isError }) => {
-  let pers = person[0];
-  console.log(isLoader);
-
   return (
     <>
       {isError ? (
@@ -15,18 +12,22 @@ const FullCard = ({ person, isLoader, isError }) => {
       ) : (
         <div className={styles.wrapper}>
           <div className={styles.photoWrapper}>
-            <img className={styles.photo} src={pers.img} alt={pers.name}></img>
+            <img
+              className={styles.photo}
+              src={person[0].img}
+              alt={person[0].name}
+            ></img>
           </div>
           <div className={styles.info}>
-            <div className={styles.status}>{pers.status}</div>
-            <div className={styles.name}>{pers.name}</div>
+            <div className={styles.status}>{person[0].status}</div>
+            <div className={styles.name}>{person[0].name}</div>
             <div className={styles.birthday}>
               <span className={styles.lightText}>Date of birth: </span>
-              {pers.birthday}
+              {person[0].birthday}
             </div>
             <div className={styles.nickName}>
               <span className={styles.lightText}>Nickname: </span>
-              {pers.nickname}
+              {person[0].nickname}
             </div>
             <div className={styles.quote}>
               <span className={styles.lightText}>Quote: </span>

@@ -5,6 +5,7 @@ import {
   CHANGE_STATUS_LOADER_CURRENT_PERSON,
   GET_ERROR_WHEN_UPLOAD_CURRENT_PERSON,
   LOAD_CURRENT_PERSON,
+  CLEAN_CURRENT_PERSON,
 } from "../actionTypes/exportActions";
 
 const initialState = {
@@ -13,7 +14,7 @@ const initialState = {
   isError: false,
   isLoadCurrentPerson: false,
   isErrorCurrentPerson: false,
-  currentPerson: [],
+  currentPerson: [{}],
 };
 
 function cardListReducer(state = initialState, action) {
@@ -49,6 +50,11 @@ function cardListReducer(state = initialState, action) {
       return {
         ...state,
         isErrorCurrentPerson: action.payload,
+      };
+    case CLEAN_CURRENT_PERSON:
+      return {
+        ...state,
+        currentPerson: [{}],
       };
     default:
       return state;

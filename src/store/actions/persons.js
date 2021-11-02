@@ -3,6 +3,9 @@ import {
   GET_ERROR_WHEN_UPLOAD_CHARACTER_LIST,
   CHANGE_STATUS_LOADER,
   LOAD_CURRENT_PERSON,
+  CHANGE_STATUS_LOADER_CURRENT_PERSON,
+	GET_ERROR_WHEN_UPLOAD_CURRENT_PERSON,
+	CLEAN_CURRENT_PERSON
 } from "./../actionTypes/exportActions";
 import Repository from "../../repository";
 
@@ -32,10 +35,29 @@ export const loadPersonList = () => async (dispatch) => {
     : dispatch(getPersonsList(value), dispatch(changeStatusForLoader(false)));
 };
 
+export const changeStatusForLoaderCurrentPerson = (value) => ({
+  type: CHANGE_STATUS_LOADER_CURRENT_PERSON,
+  payload: value,
+});
+
+export const getErrorWhenUploadCurrentPerson = (value) => ({
+  type: GET_ERROR_WHEN_UPLOAD_CURRENT_PERSON,
+  payload: value,
+});
+
+export const cleanCurrentPerson = () => ({
+  type: CLEAN_CURRENT_PERSON,
+});
+
 export const loadPersonById = (id) => async (dispatch) => {
-  dispatch(changeStatusForLoader(true));
-  const { value, error } = await Repository.APICurrentPerson.getCurrentPerson(id);
+  dispatch(changeStatusForLoaderCurrentPerson(true));
+  const { value, error } = await Repository.APICurrentPerson.getCurrentPerson(
+    id
+  );
   error || !value
-    ? dispatch(getErrorWhenUpload(true))
-    : dispatch(getCurrentPerson(value), dispatch(changeStatusForLoader(false)));
+    ? dispatch(getErrorWhenUploadCurrentPerson(true))
+    : dispatch(
+        getCurrentPerson(value),
+        dispatch(changeStatusForLoaderCurrentPerson(false))
+      );
 };

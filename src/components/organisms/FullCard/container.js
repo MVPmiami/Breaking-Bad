@@ -8,8 +8,12 @@ export const PersonFullCardContainer = () => {
   const dispatch = useDispatch();
   const { id } = useParams();
   const person = useSelector((state) => state.cardListReducer.currentPerson);
-  const isError = useSelector((state) => state.cardListReducer.isError);
-  const isLoader = useSelector((state) => state.cardListReducer.isLoader);
+  const isError = useSelector(
+    (state) => state.cardListReducer.isErrorCurrentPerson
+  );
+  const isLoader = useSelector(
+    (state) => state.cardListReducer.isLoadCurrentPerson
+  );
 
   useEffect(() => {
     dispatch(loadPersonById(id));
