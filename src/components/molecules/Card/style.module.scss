@@ -1,49 +1,57 @@
 @import "./../../../assets/styles/style.scss";
 
-.cardWrapper {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  width: 23.688rem;
-  font-family: "Roboto";
-  .avatar {
-    width: 7.75rem;
-    height: 7.75rem;
-    border-radius: 0.25rem 0 0 0.25rem;
-  }
-  .personContent {
-    padding: 0 1.5rem;
-    box-shadow: 0px 0.25rem 0.5rem $shadow;
-    border-radius: 0 0.25rem 0.25rem 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    height: 7.75rem;
-    width: 15.938rem;
-    .status {
-      @include status($statusText, $statusBcg);
-    }
-    .name {
-      margin-bottom: 0.75rem;
-    }
-    .data {
-      color: $dataText;
-      font-size: 0.75rem;
-      opacity: 0.4;
-    }
-  }
-}
-@media (max-width: 400px) {
+.link {
+  text-decoration: none;
+  color: $dataText;
   .cardWrapper {
-    width: 17rem;
-    .personContent {
-      padding: 0 0.75rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 23.688rem;
+    font-family: "Roboto";
+    &:hover {
+      cursor: pointer;
+      box-shadow: 0 0.5rem 0.75rem $shadow;
+    }
+    .avatar {
       width: 7.75rem;
+      height: 7.75rem;
+      border-radius: 0.25rem 0 0 0.25rem;
+    }
+    .personContent {
+      padding: 0 1.5rem;
+      box-shadow: 0 0.25rem 0.5rem $shadow;
+      border-radius: 0 0.25rem 0.25rem 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      height: 7.75rem;
+      width: 15.938rem;
+      .status {
+        @include status($statusText, $statusBcg);
+      }
       .name {
-        font-size: 1rem;
-        text-align: center;
         margin-bottom: 0.75rem;
+      }
+      .data {
+        color: $dataText;
+        font-size: 0.75rem;
+        opacity: 0.4;
+      }
+    }
+  }
+  @media (max-width: 400px) {
+    .cardWrapper {
+      width: 17rem;
+      .personContent {
+        padding: 0 0.75rem;
+        width: 7.75rem;
+        .name {
+          font-size: 1rem;
+          text-align: center;
+          margin-bottom: 0.75rem;
+        }
       }
     }
   }

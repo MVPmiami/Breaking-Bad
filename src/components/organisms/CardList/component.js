@@ -10,7 +10,8 @@ const CardList = ({ persons, isLoader, isError }) => {
       name={person.name}
       birthday={person.birthday}
       img={person.img}
-      status={person.status}
+			status={person.status}
+			id={person.char_id}
     />
   ));
   return (

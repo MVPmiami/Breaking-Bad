@@ -11,8 +11,8 @@ export const PersonsListContainer = () => {
 
   useEffect(() => {
     dispatch(loadPersonList());
-	}, [dispatch]);
-	
+  }, [dispatch]);
+
   return <CardList persons={persons} isLoader={isLoader} isError={isError} />;
 };
 
