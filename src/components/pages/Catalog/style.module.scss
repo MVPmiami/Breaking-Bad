@@ -1,1 +1,8 @@
+@import "./../../../assets/styles/style.scss";
 
+.catalogPage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: $rootBcg;
+}
