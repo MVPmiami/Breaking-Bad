@@ -4,7 +4,9 @@ $statusBcg: #d6ffd2;
 $shadow: #0000000a;
 $errorText: rgb(240, 227, 227);
 $errorBcg: #9c1e1e;
-
+$CatalogBcgActive: #f1b926;
+$CatalogBcgDisable: #ffffff;
+$rootBcg: #fbfbfb;
 @mixin status($statusText, $statusBcg) {
   color: $statusText;
   background-color: $statusBcg;
@@ -14,4 +16,8 @@ $errorBcg: #9c1e1e;
   margin-bottom: 0.75rem;
   letter-spacing: 0.063rem;
   font-variant: small-caps;
+}
+
+.container {
+  background-color: $rootBcg;
 }

@@ -1,0 +1,27 @@
+@import "./../../../assets/styles/style.scss";
+
+.headerWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 5rem;
+  padding: 0 7.5rem;
+  width: calc(100vw - 15rem);
+  background-color: $CatalogBcgDisable;
+  .logo {
+    background-image: url("./../../../assets/img/logo.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 5rem;
+    height: 3rem;
+  }
+  .linkToCatalog {
+    text-decoration: none;
+  }
+}
+
+@media (max-width: 810px) {
+  .headerWrapper {
+    width: calc(100vw - 5rem);
+  }
+}

@@ -5,11 +5,11 @@ import { cleanCurrentPerson } from "./../../../store/actions/persons";
 
 export const PersonPageContainer = () => {
   const dispatch = useDispatch();
-  const cleanPerson = () => {
+  const cleanData = () => {
     dispatch(cleanCurrentPerson());
   };
 
-  return <Person cleanPerson={cleanPerson} />;
+  return <Person cleanData={cleanData} />;
 };
 
 export const container = PersonPageContainer;

@@ -3,6 +3,9 @@
 .currentPage {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: $rootBcg;
   .linkToCatalog {
     width: 9rem;
     display: flex;
