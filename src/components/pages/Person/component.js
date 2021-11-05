@@ -1,7 +1,7 @@
 import styles from "./style.module.scss";
 import { Link } from "react-router-dom";
 import FullCard from "../../organisms/FullCard";
-import Header from "../../molecules/Header/component";
+import Header from "./../../organisms/Header";
 
 const Person = ({ cleanData }) => {
   return (

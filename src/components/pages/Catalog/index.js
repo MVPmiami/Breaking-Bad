@@ -1,6 +1,6 @@
 import styles from "./style.module.scss";
 import CardList from "./../../organisms/CardList";
-import Header from "./../../molecules/Header";
+import Header from "./../../organisms/Header";
 
 const Catalog = () => {
   return (

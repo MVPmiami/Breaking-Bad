@@ -1,5 +1,5 @@
 import styles from "./style.module.scss";
-import Header from "./../../molecules/Header";
+import Header from "./../../organisms/Header";
 
 const Home = () => {
   return (
