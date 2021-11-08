@@ -1,6 +1,6 @@
 @import "./../../../assets/styles/style.scss";
 
-.footer {
+footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -22,14 +22,14 @@
   }
 }
 @media (max-width: 610px) {
-  .footer {
+  footer {
     width: calc(100vw - 10rem);
     padding: 0 5rem;
   }
 }
 
 @media (max-width: 400px) {
-  .footer {
+  footer {
     width: calc(100vw - 4rem);
     padding: 0 2rem;
   }

@@ -7,7 +7,9 @@ const Catalog = () => {
   return (
     <div className={styles.catalogPage}>
       <Header />
-      <CardList />
+      <main>
+        <CardList />
+      </main>
       <Footer />
     </div>
   );
