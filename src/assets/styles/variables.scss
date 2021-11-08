@@ -6,6 +6,7 @@ $errorText: rgb(240, 227, 227);
 $errorBcg: #9c1e1e;
 $CatalogBcgActive: #f1b926;
 $CatalogBcgDisable: #ffffff;
+$footer: white;
 $rootBcg: #fbfbfb;
 @mixin status($statusText, $statusBcg) {
   color: $statusText;

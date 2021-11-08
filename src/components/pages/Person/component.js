@@ -2,6 +2,7 @@ import styles from "./style.module.scss";
 import { Link } from "react-router-dom";
 import FullCard from "../../organisms/FullCard";
 import Header from "./../../organisms/Header";
+import Footer from "../../molecules/Footer";
 
 const Person = ({ cleanData }) => {
   return (
@@ -14,6 +15,7 @@ const Person = ({ cleanData }) => {
         </Link>
         <FullCard />
       </div>
+      <Footer />
     </div>
   );
 };
