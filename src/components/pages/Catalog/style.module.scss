@@ -2,6 +2,8 @@
 
 .catalogPage {
   display: flex;
+  overflow-x: hidden;
+  min-height: 100vh;
   flex-direction: column;
   align-items: center;
   background-color: $rootBcg;

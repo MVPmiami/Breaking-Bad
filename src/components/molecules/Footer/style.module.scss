@@ -1,0 +1,36 @@
+@import "./../../../assets/styles/style.scss";
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: calc(100vw - 15rem);
+  padding: 0 7.5rem;
+  height: 5rem;
+  background-color: $footer;
+  margin-top: auto;
+  overflow-x: hidden;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  .year {
+    color: $dataText;
+  }
+  .developer {
+    text-decoration: none;
+    color: $dataText;
+  }
+}
+@media (max-width: 610px) {
+  .footer {
+    width: calc(100vw - 10rem);
+    padding: 0 5rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .footer {
+    width: calc(100vw - 4rem);
+    padding: 0 2rem;
+  }
+}

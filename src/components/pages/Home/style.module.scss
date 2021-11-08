@@ -1,1 +1,10 @@
 @import "./../../../assets/styles/style.scss";
+
+.homePage {
+  display: flex;
+  overflow: hidden;
+  min-height: 100vh;
+  flex-direction: column;
+  align-items: center;
+  background-color: $rootBcg;
+}
