@@ -1,12 +1,13 @@
 import styles from "./style.module.scss";
-import Header from "./../../organisms/Header";
-import Footer from "../../molecules/Footer";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import img from "./../../../assets/img/mainPicture.webp";
 
 const Home = () => {
   return (
     <div className={styles.homePage}>
-      <Header />
-      <Footer />
+      <main>
+        <LazyLoadImage src={img} className={styles.img}></LazyLoadImage>
+      </main>
     </div>
   );
 };
