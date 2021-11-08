@@ -4,7 +4,7 @@
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  min-height: 100vh;
+  min-height: calc(100vh - 10rem);
   justify-content: center;
   align-items: center;
   background-color: $rootBcg;

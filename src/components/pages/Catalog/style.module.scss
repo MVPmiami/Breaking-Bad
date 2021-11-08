@@ -3,7 +3,7 @@
 .catalogPage {
   display: flex;
   overflow-x: hidden;
-  min-height: 100vh;
+	min-height: calc(100vh - 10rem);
   flex-direction: column;
   align-items: center;
   background-color: $rootBcg;
