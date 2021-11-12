@@ -16,7 +16,7 @@ const initialState = {
   isLoadCurrentPerson: false,
   isErrorCurrentPerson: false,
   currentPerson: [{}],
-  randomQuote: [{ quote: "I hate drugs" }],
+  randomQuote: [{ quote: "" }],
 };
 
 function cardListReducer(state = initialState, action) {

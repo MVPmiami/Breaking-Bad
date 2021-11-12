@@ -78,7 +78,7 @@ export const loadQuoteByAuthor = (author) => async (dispatch) => {
   const { value, error } = await Repository.APIQuote.getQuoteByAuthor(author);
   error || !value
     ? dispatch(loadQuote([{ quote: "start quote" }]))
-    : dispatch(value.length !== 0 ? loadQuote(value): loadQuote([{ quote: "I hate drugs" }]),
+    : dispatch(value.length !== 0 ? loadQuote(value): loadQuote([{ quote: "" }]),
   dispatch(changeStatusForLoaderCurrentPerson(false))
       );
 };

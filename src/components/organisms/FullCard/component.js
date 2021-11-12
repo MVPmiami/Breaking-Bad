@@ -29,10 +29,12 @@ const FullCard = ({ person, isLoader, isError, randomQuote }) => {
               <span className={styles.lightText}>Nickname: </span>
               {person[0].nickname}
             </div>
-            <div className={styles.quote}>
-              <span className={styles.lightText}>Quote: </span>
-              {randomQuote}
-            </div>
+            {randomQuote.length ? (
+              <div className={styles.quote}>
+                <span className={styles.lightText}>Quote: </span>
+                {randomQuote}
+              </div>
+            ) : null}
           </div>
         </div>
       )}
