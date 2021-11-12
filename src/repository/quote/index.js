@@ -5,9 +5,7 @@ class Quote {
     let result = {
       value: null,
       error: null,
-		};
-		author = "Walter+White"
-    author = author.replace(" ", "+");
+    };
     try {
       let response = await axios.get(
         `https://www.breakingbadapi.com/api/quote/random?author=${author}`

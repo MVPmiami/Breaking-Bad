@@ -12,7 +12,9 @@ export const PersonFullCardContainer = () => {
   const randomQuote = useSelector(
     (state) => state.cardListReducer.randomQuote
   )[0].quote;
-  const author = { person }.person[0].name;
+  let author = useSelector((state) => state.cardListReducer.currentPerson)[0]
+    .name;
+
   const isError = useSelector(
     (state) => state.cardListReducer.isErrorCurrentPerson
   );
@@ -23,7 +25,7 @@ export const PersonFullCardContainer = () => {
   useEffect(() => {
     dispatch(loadPersonById(id));
     dispatch(loadQuoteByAuthor(author));
-  }, [dispatch]);
+  }, [author]);
 
   return (
     <FullCard

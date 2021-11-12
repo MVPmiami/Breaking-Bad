@@ -65,17 +65,20 @@ export const loadPersonById = (id) => async (dispatch) => {
 };
 
 export const loadQuote = (quote) => {
+  console.log(quote);
   return { type: GET_QUOTE, payload: quote };
 };
 
 export const loadQuoteByAuthor = (author) => async (dispatch) => {
   dispatch(changeStatusForLoaderCurrentPerson(true));
   dispatch(getErrorWhenUploadCurrentPerson(false));
+  if (author === undefined) {
+    return;
+  }
   const { value, error } = await Repository.APIQuote.getQuoteByAuthor(author);
   error || !value
-    ? dispatch(loadQuote("I want to make some drugs"))
-    : dispatch(
-        loadQuote(value),
-        dispatch(changeStatusForLoaderCurrentPerson(false))
+    ? dispatch(loadQuote([{ quote: "start quote" }]))
+    : dispatch(value.length !== 0 ? loadQuote(value): loadQuote([{ quote: "I hate drugs" }]),
+  dispatch(changeStatusForLoaderCurrentPerson(false))
       );
 };
