@@ -2,7 +2,7 @@ import styles from "./style.module.scss";
 import ErrorMessage from "../../atoms/Error";
 import Loader from "../../atoms/Loader";
 
-const FullCard = ({ person, isLoader, isError }) => {
+const FullCard = ({ person, isLoader, isError, randomQuote }) => {
   return (
     <>
       {isError ? (
@@ -29,12 +29,12 @@ const FullCard = ({ person, isLoader, isError }) => {
               <span className={styles.lightText}>Nickname: </span>
               {person[0].nickname}
             </div>
-            <div className={styles.quote}>
-              <span className={styles.lightText}>Quote: </span>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Non,
-              aliquam laoreet vivamus sed. Diam fames mi, quam tellus cursus
-              volutpat velit massa.
-            </div>
+            {randomQuote.length ? (
+              <div className={styles.quote}>
+                <span className={styles.lightText}>Quote: </span>
+                {randomQuote}
+              </div>
+            ) : null}
           </div>
         </div>
       )}

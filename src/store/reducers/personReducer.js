@@ -6,6 +6,7 @@ import {
   GET_ERROR_WHEN_UPLOAD_CURRENT_PERSON,
   LOAD_CURRENT_PERSON,
   CLEAN_CURRENT_PERSON,
+  GET_QUOTE,
 } from "../actionTypes/exportActions";
 
 const initialState = {
@@ -15,6 +16,7 @@ const initialState = {
   isLoadCurrentPerson: false,
   isErrorCurrentPerson: false,
   currentPerson: [{}],
+  randomQuote: [{ quote: "" }],
 };
 
 function cardListReducer(state = initialState, action) {
@@ -55,6 +57,11 @@ function cardListReducer(state = initialState, action) {
       return {
         ...state,
         currentPerson: [{}],
+      };
+    case GET_QUOTE:
+      return {
+        ...state,
+        randomQuote: action.payload,
       };
     default:
       return state;

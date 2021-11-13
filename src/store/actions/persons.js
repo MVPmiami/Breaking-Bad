@@ -6,6 +6,7 @@ import {
   CHANGE_STATUS_LOADER_CURRENT_PERSON,
   GET_ERROR_WHEN_UPLOAD_CURRENT_PERSON,
   CLEAN_CURRENT_PERSON,
+  GET_QUOTE,
 } from "./../actionTypes/exportActions";
 import Repository from "../../repository";
 
@@ -59,6 +60,26 @@ export const loadPersonById = (id) => async (dispatch) => {
     ? dispatch(getErrorWhenUploadCurrentPerson(true))
     : dispatch(
         getCurrentPerson(value),
+        dispatch(changeStatusForLoaderCurrentPerson(false))
+      );
+};
+
+export const loadQuote = (quote) => {
+  console.log(quote);
+  return { type: GET_QUOTE, payload: quote };
+};
+
+export const loadQuoteByAuthor = (author) => async (dispatch) => {
+  dispatch(changeStatusForLoaderCurrentPerson(true));
+  dispatch(getErrorWhenUploadCurrentPerson(false));
+  if (author === undefined) {
+    return;
+  }
+  const { value, error } = await Repository.APIQuote.getQuoteByAuthor(author);
+  error || !value
+    ? dispatch(loadQuote([{ quote: "start quote" }]))
+    : dispatch(
+        value.length ? loadQuote(value) : loadQuote([{ quote: "" }]),
         dispatch(changeStatusForLoaderCurrentPerson(false))
       );
 };
