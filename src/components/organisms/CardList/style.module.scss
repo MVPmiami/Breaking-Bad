@@ -9,22 +9,172 @@ body {
   align-items: center;
 }
 
-.cardList {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 1rem;
-  width: 74.563rem;
-  margin: 5rem auto;
+.wrapper {
+  margin-top: 5rem;
+  .headerCatalog {
+    display: flex;
+    justify-content: space-between;
+    width: 74.563rem;
+    .headerText {
+      color: $dataText;
+      font-family: Roboto;
+      font-weight: 500;
+      font-size: 2rem;
+      line-height: 2.5rem;
+      user-select: none;
+    }
+    .toogles {
+      display: flex;
+      width: 4rem;
+      justify-content: space-between;
+      .list {
+        width: 1.5rem;
+        height: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        &:hover {
+          cursor: pointer;
+          .rectangle1 {
+            border: 0.125rem solid $activeBTN;
+          }
+        }
+        .rectangle1 {
+          border: 0.125rem solid $disableBTN;
+          box-sizing: border-box;
+          border-radius: 0.125rem;
+          height: 0.688rem;
+        }
+        .rectangle1.active {
+          border: 0.125rem solid $activeBTN;
+        }
+      }
+      .grid {
+        width: 1.5rem;
+        height: 1.5rem;
+        display: flex;
+        flex-flow: wrap;
+        justify-content: space-between;
+        &:hover {
+          cursor: pointer;
+          .rectangle2 {
+            border: 0.125rem solid $activeBTN;
+          }
+        }
+        .rectangle2 {
+          border: 0.125rem solid $disableBTN;
+          box-sizing: border-box;
+          border-radius: 0.125rem;
+          width: 0.688rem;
+          height: 0.688rem;
+        }
+        .rectangle2.active {
+          border: 0.125rem solid $activeBTN;
+        }
+      }
+    }
+  }
+  .headerList {
+    margin: 2rem 0 0;
+    display: flex;
+    border: 0.063rem solid $borderCard;
+    border-width: 0 0 0.063rem 0;
+    padding-bottom: 1.5rem;
+    .status {
+      font-family: Roboto;
+      font-weight: normal;
+      font-size: 0.875rem;
+      line-height: 1.5rem;
+      margin-left: 6.5rem;
+    }
+    .name {
+      font-family: Roboto;
+      font-weight: normal;
+      font-size: 0.875rem;
+      line-height: 1.5rem;
+      margin-left: 10rem;
+    }
+    .birth {
+      font-family: Roboto;
+      font-weight: normal;
+      font-size: 0.875rem;
+      line-height: 1.5rem;
+      margin-left: 15.438rem;
+    }
+  }
+  .cardListGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1rem;
+    width: 74.563rem;
+    margin: 5rem auto;
+    @media (max-width: 1215px) {
+      width: 49rem;
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media (max-width: 810px) {
+      width: 24rem;
+      grid-template-columns: repeat(1, 1fr);
+    }
+    @media (max-width: 420px) {
+      width: 17rem;
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+  .cardList {
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-start;
+    width: 74.563rem;
+    margin: 0 auto;
+    @media (max-width: 1215px) {
+      width: 49rem;
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media (max-width: 810px) {
+      width: 24rem;
+      grid-template-columns: repeat(1, 1fr);
+    }
+    @media (max-width: 420px) {
+      width: 17rem;
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
   @media (max-width: 1215px) {
-    width: 49rem;
-    grid-template-columns: repeat(2, 1fr);
+    .headerCatalog {
+      width: 49rem;
+    }
   }
   @media (max-width: 810px) {
-    width: 24rem;
-    grid-template-columns: repeat(1, 1fr);
+    .headerCatalog {
+      width: 24rem;
+    }
+    .headerList {
+      .status {
+        margin-left: 3.5rem;
+      }
+      .name {
+        margin-left: 6rem;
+      }
+      .birth {
+        margin-left: 5rem;
+      }
+    }
   }
   @media (max-width: 420px) {
-    width: 17rem;
-    grid-template-columns: repeat(1, 1fr);
+    .headerCatalog {
+      width: 17rem;
+    }
+    .headerList {
+      .status {
+        margin-left: 2.5rem;
+      }
+      .name {
+        margin-left: 3.5rem;
+      }
+      .birth {
+        margin-left: 1.5rem;
+      }
+    }
   }
 }

@@ -4,4 +4,13 @@
   border: 0;
   font-size: 16px;
   overflow-x: hidden;
+  scrollbar-color: #f1b926 #ffffff;
+  scrollbar-width: thin;
+  ::-webkit-scrollbar {
+    width: 0.5rem;
+    background-color: #ffffff;
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color: #f1b926;
+  }
 }

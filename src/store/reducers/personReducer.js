@@ -7,6 +7,7 @@ import {
   LOAD_CURRENT_PERSON,
   CLEAN_CURRENT_PERSON,
   GET_QUOTE,
+  TOOGLE_LIST,
 } from "../actionTypes/exportActions";
 
 const initialState = {
@@ -17,6 +18,7 @@ const initialState = {
   isErrorCurrentPerson: false,
   currentPerson: [{}],
   randomQuote: [{ quote: "" }],
+  isList: false,
 };
 
 function cardListReducer(state = initialState, action) {
@@ -62,6 +64,11 @@ function cardListReducer(state = initialState, action) {
       return {
         ...state,
         randomQuote: action.payload,
+      };
+    case TOOGLE_LIST:
+      return {
+        ...state,
+        isList: !state.isList,
       };
     default:
       return state;

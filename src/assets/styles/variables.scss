@@ -1,4 +1,6 @@
 $statusText: #51e245;
+$disableBTN: #a9a9a9;
+$activeBTN: #f2c140;
 $dataText: #2d2d2d;
 $statusBcg: #d6ffd2;
 $shadow: #0000000a;
@@ -7,6 +9,7 @@ $errorBcg: #9c1e1e;
 $CatalogBcgActive: #f1b926;
 $CatalogBcgDisable: #ffffff;
 $footer: white;
+$borderCard: #a9a9a9;
 $rootBcg: #fbfbfb;
 @mixin status($statusText, $statusBcg) {
   color: $statusText;

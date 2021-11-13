@@ -7,6 +7,7 @@ import {
   GET_ERROR_WHEN_UPLOAD_CURRENT_PERSON,
   CLEAN_CURRENT_PERSON,
   GET_QUOTE,
+  TOOGLE_LIST,
 } from "./../actionTypes/exportActions";
 import Repository from "../../repository";
 
@@ -65,8 +66,11 @@ export const loadPersonById = (id) => async (dispatch) => {
 };
 
 export const loadQuote = (quote) => {
-  console.log(quote);
   return { type: GET_QUOTE, payload: quote };
+};
+
+export const toogleList = () => {
+  return { type: TOOGLE_LIST };
 };
 
 export const loadQuoteByAuthor = (author) => async (dispatch) => {
