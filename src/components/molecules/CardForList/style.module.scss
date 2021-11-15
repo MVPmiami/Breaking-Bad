@@ -1,0 +1,99 @@
+@import "./../../../assets/styles/style.scss";
+
+.link {
+  text-decoration: none;
+  color: $dataText;
+  .cardWrapper {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: $rootBcg;
+    border: 0.063rem solid $borderCard;
+    border-width: 0 0 0.063rem 0;
+    padding: 0.5rem 0;
+    height: 5.063rem;
+    font-family: "Roboto";
+    &:hover {
+      cursor: pointer;
+      box-shadow: 0 0.5rem 0.75rem $shadow;
+    }
+    .leftSide {
+      display: flex;
+      width: 19rem;
+      align-items: center;
+      .avatar {
+        width: 4rem;
+        height: 4rem;
+      }
+      .status {
+        @include status($statusText, $statusBcg);
+        height: 1rem;
+        padding: 0.25rem 0.75rem;
+        margin: 0 0 0 2.5rem;
+      }
+    }
+    .personContent {
+      display: flex;
+      width: 22.5rem;
+      justify-content: space-between;
+      align-items: center;
+      .data {
+        color: $dataText;
+        font-size: 0.75rem;
+        opacity: 0.4;
+      }
+    }
+  }
+  @media (max-width: 810px) {
+    .cardWrapper {
+      .leftSide {
+        .avatar {
+          width: 2.5rem;
+          height: 2.5rem;
+        }
+        .status {
+          height: 1rem;
+          padding: 0.25rem 0.75rem;
+          margin: 0 0 0 1rem;
+        }
+      }
+      .personContent {
+        display: flex;
+        width: 19rem;
+        .data {
+          font-size: 0.75rem;
+        }
+      }
+    }
+  }
+  @media (max-width: 420px) {
+    .cardWrapper {
+      .leftSide {
+        .avatar {
+          width: 2rem;
+          height: 2rem;
+        }
+        .status {
+          @include status($statusText, $statusBcg);
+          height: 1.7rem;
+          padding: 0.25rem 0.25rem;
+          margin: 0 0 0 0.5rem;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: 0.6rem;
+        }
+      }
+      .personContent {
+        .name {
+          font-size: 0.75rem;
+        }
+        .data {
+          color: $dataText;
+          font-size: 0.75rem;
+          opacity: 0.4;
+        }
+      }
+    }
+  }
+}
