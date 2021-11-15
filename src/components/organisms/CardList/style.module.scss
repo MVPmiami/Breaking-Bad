@@ -11,69 +11,6 @@ body {
 
 .wrapper {
   margin-top: 5rem;
-  .headerCatalog {
-    display: flex;
-    justify-content: space-between;
-    width: 74.563rem;
-    .headerText {
-      color: $dataText;
-      font-family: Roboto;
-      font-weight: 500;
-      font-size: 2rem;
-      line-height: 2.5rem;
-      user-select: none;
-    }
-    .toogles {
-      display: flex;
-      width: 4rem;
-      justify-content: space-between;
-      .list {
-        width: 1.5rem;
-        height: 1.5rem;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        &:hover {
-          cursor: pointer;
-          .rectangle1 {
-            border: 0.125rem solid $activeBTN;
-          }
-        }
-        .rectangle1 {
-          border: 0.125rem solid $disableBTN;
-          box-sizing: border-box;
-          border-radius: 0.125rem;
-          height: 0.688rem;
-        }
-        .rectangle1.active {
-          border: 0.125rem solid $activeBTN;
-        }
-      }
-      .grid {
-        width: 1.5rem;
-        height: 1.5rem;
-        display: flex;
-        flex-flow: wrap;
-        justify-content: space-between;
-        &:hover {
-          cursor: pointer;
-          .rectangle2 {
-            border: 0.125rem solid $activeBTN;
-          }
-        }
-        .rectangle2 {
-          border: 0.125rem solid $disableBTN;
-          box-sizing: border-box;
-          border-radius: 0.125rem;
-          width: 0.688rem;
-          height: 0.688rem;
-        }
-        .rectangle2.active {
-          border: 0.125rem solid $activeBTN;
-        }
-      }
-    }
-  }
   .headerList {
     margin: 2rem 0 0;
     display: flex;

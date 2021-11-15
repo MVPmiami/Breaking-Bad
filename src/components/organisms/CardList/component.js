@@ -3,6 +3,7 @@ import Card from "./../../molecules/Card/";
 import CardForList from "../../molecules/CardForList";
 import ErrorMessage from "../../atoms/Error";
 import Loader from "./../../atoms/Loader";
+import Toogle from "../../molecules/Toogle";
 
 const CardList = ({ persons, isLoader, isError, isList, toogle }) => {
   let cardsList = [];
@@ -29,33 +30,7 @@ const CardList = ({ persons, isLoader, isError, isList, toogle }) => {
       )));
   return (
     <div className={styles.wrapper}>
-      <div className={styles.headerCatalog}>
-        <h2 className={styles.headerText}>Catalog</h2>
-        <div className={styles.toogles}>
-          <div className={styles.list} onClick={toogle}>
-            <div
-              className={`${styles.rectangle1} ${isList ? styles.active : ""}`}
-            ></div>
-            <div
-              className={`${styles.rectangle1} ${isList ? styles.active : ""}`}
-            ></div>
-          </div>
-          <div className={styles.grid} onClick={toogle}>
-            <div
-              className={`${styles.rectangle2} ${!isList ? styles.active : ""}`}
-            ></div>
-            <div
-              className={`${styles.rectangle2} ${!isList ? styles.active : ""}`}
-            ></div>
-            <div
-              className={`${styles.rectangle2} ${!isList ? styles.active : ""}`}
-            ></div>
-            <div
-              className={`${styles.rectangle2} ${!isList ? styles.active : ""}`}
-            ></div>
-          </div>
-        </div>
-      </div>
+      <Toogle isList={isList} toogle={toogle} />
       {isList ? (
         <div className={styles.headerList}>
           <h2 className={styles.status}>Status</h2>
