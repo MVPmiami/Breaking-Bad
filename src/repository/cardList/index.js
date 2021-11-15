@@ -8,7 +8,7 @@ class cardList {
     };
     try {
       let response = await axios.get(
-        "https://www.breakingbadapi.com/api/characters?limit=10"
+        "https://www.breakingbadapi.com/api/characters?limit=60"
       );
       result.value = response.data;
     } catch (error) {

@@ -8,6 +8,8 @@ import {
   CLEAN_CURRENT_PERSON,
   GET_QUOTE,
   TOOGLE_LIST,
+  GET_CURRENT_PAGE,
+  GET_PERSON_PER_PAGE,
 } from "../actionTypes/exportActions";
 
 const initialState = {
@@ -19,6 +21,8 @@ const initialState = {
   currentPerson: [{}],
   randomQuote: [{ quote: "" }],
   isList: false,
+  currentPage: 1,
+  personPerPage: 5,
 };
 
 function cardListReducer(state = initialState, action) {
@@ -69,6 +73,16 @@ function cardListReducer(state = initialState, action) {
       return {
         ...state,
         isList: !state.isList,
+      };
+    case GET_CURRENT_PAGE:
+      return {
+        ...state,
+        currentPage: action.payload,
+      };
+    case GET_PERSON_PER_PAGE:
+      return {
+        ...state,
+        personPerPage: action.payload,
       };
     default:
       return state;
