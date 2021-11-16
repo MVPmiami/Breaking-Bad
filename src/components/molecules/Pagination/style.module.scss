@@ -12,36 +12,6 @@
     justify-content: space-between;
     align-items: center;
     height: 4rem;
-    .pageElement {
-      min-width: 2rem;
-      min-height: 2rem;
-      color: $dataText;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      &:hover {
-        cursor: pointer;
-        color: #f1b926;
-      }
-    }
-    .pageElement.active {
-      color: #f1b926;
-      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-      border-radius: 4px;
-      background: #ffffff;
-    }
-    .arrowNavigation {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      width: 4rem;
-      margin-left: 3rem;
-      .arrow {
-        &:hover {
-          cursor: pointer;
-        }
-      }
-    }
   }
   .rightSide {
     display: flex;
@@ -49,30 +19,6 @@
     align-items: center;
     width: 16rem;
     height: 4rem;
-    .header {
-      font-family: Roboto;
-      font-weight: normal;
-      font-size: 1rem;
-      line-height: 1.5rem;
-    }
-    .amountCards {
-      min-width: 2rem;
-      min-height: 2rem;
-      color: $dataText;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      &:hover {
-        cursor: pointer;
-        color: #f1b926;
-      }
-    }
-    .amountCards.active {
-      color: #f1b926;
-      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-      border-radius: 4px;
-      background: #ffffff;
-    }
   }
 }
 

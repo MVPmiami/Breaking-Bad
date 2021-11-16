@@ -1,0 +1,12 @@
+.arrowNavigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 4rem;
+  margin-left: 3rem;
+  .arrow {
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
