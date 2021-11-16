@@ -27,8 +27,8 @@ const Pagination = ({
       dots,
       lastPageNumber,
     ];
-    if (currentPage >= 10) {
-      pageNumbers = [10, 11, lastPageNumber];
+    if (currentPage >= lastPageNumber - 2) {
+      pageNumbers = [lastPageNumber - 2, lastPageNumber - 1, lastPageNumber];
     }
   } else if (pageNumbers.length > 5 && pageNumbers.length <= 6) {
     let lastPageNumber = pageNumbers[pageNumbers.length - 1];
@@ -39,8 +39,8 @@ const Pagination = ({
       dots,
       lastPageNumber,
     ];
-    if (currentPage >= 4) {
-      pageNumbers = [4, 5, lastPageNumber];
+    if (currentPage >= lastPageNumber - 2) {
+      pageNumbers = [lastPageNumber - 2, lastPageNumber - 1, lastPageNumber];
     }
   }
 
