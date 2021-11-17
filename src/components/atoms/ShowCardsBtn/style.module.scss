@@ -1,6 +1,6 @@
 @import "./../../../assets/styles/style.scss";
 
-.pageElement {
+.amountCards {
   min-width: 2rem;
   min-height: 2rem;
   color: $dataText;
@@ -17,7 +17,7 @@
     color: $CatalogBcgActive;
   }
 }
-.pageElement.active {
+.amountCards.active {
   color: $CatalogBcgActive;
   box-shadow: 0px 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
   border-radius: 0.25rem;

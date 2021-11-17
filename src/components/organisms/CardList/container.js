@@ -7,6 +7,7 @@ import {
   toogleList,
   getCurrentPage,
   getAmountCards,
+  getAmountCharacters,
 } from "./../../../store/actions/persons";
 
 export const PersonsListContainer = () => {
@@ -16,17 +17,23 @@ export const PersonsListContainer = () => {
   const isLoader = useSelector((state) => state.cardListReducer.isLoader);
   const isList = useSelector((state) => state.cardListReducer.isList);
   const currentPage = useSelector((state) => state.cardListReducer.currentPage);
+  let prevPageNumber = currentPage - 1;
+  const amountCharacters = useSelector(
+    (state) => state.cardListReducer.amountCharacters
+  );
   const personPerPage = useSelector(
     (state) => state.cardListReducer.personPerPage
   );
 
   const lastPersonIndex = currentPage * personPerPage;
   const firstPersonIndex = lastPersonIndex - personPerPage;
-  const currentPersons = persons.slice(firstPersonIndex, lastPersonIndex);
-  const totalPages = Math.ceil(persons.length / personPerPage);
+  const currentPersons = persons.slice(0, persons.length);
+  const totalPages = Math.ceil(amountCharacters / personPerPage);
 
   const paginate = (currentPage) => {
-    dispatch(getCurrentPage(currentPage));
+    currentPage === "..."
+      ? (currentPage = prevPageNumber)
+      : dispatch(getCurrentPage(currentPage));
   };
 
   const paginateToNextPage = (currentPage) => {
@@ -51,8 +58,9 @@ export const PersonsListContainer = () => {
   };
 
   useEffect(() => {
-    dispatch(loadPersonList());
-  }, [dispatch]);
+    dispatch(loadPersonList(personPerPage, firstPersonIndex));
+    dispatch(getAmountCharacters());
+  }, [personPerPage, amountCharacters, currentPage]);
 
   return (
     <div>
@@ -65,7 +73,7 @@ export const PersonsListContainer = () => {
       />
       <Pagination
         personPerPage={personPerPage}
-        totalPersons={persons.length}
+        totalPersons={amountCharacters}
         paginate={paginate}
         currentPage={currentPage}
         paginateToNextPage={paginateToNextPage}

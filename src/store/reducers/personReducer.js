@@ -9,11 +9,13 @@ import {
   GET_QUOTE,
   TOOGLE_LIST,
   GET_CURRENT_PAGE,
-  GET_PERSON_PER_PAGE,
+	GET_PERSON_PER_PAGE,
+	GET_AMOUNT_CHARACTERS
 } from "../actionTypes/exportActions";
 
 const initialState = {
-  cardList: [],
+	cardList: [],
+	amountCharacters: 0,
   isLoader: false,
   isError: false,
   isLoadCurrentPerson: false,
@@ -83,7 +85,12 @@ function cardListReducer(state = initialState, action) {
       return {
         ...state,
         personPerPage: action.payload,
-      };
+			};
+			case GET_AMOUNT_CHARACTERS:
+				return {
+					...state,
+					amountCharacters: action.payload,
+				};
     default:
       return state;
   }
