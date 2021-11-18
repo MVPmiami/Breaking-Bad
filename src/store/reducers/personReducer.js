@@ -8,10 +8,14 @@ import {
   CLEAN_CURRENT_PERSON,
   GET_QUOTE,
   TOOGLE_LIST,
+  GET_CURRENT_PAGE,
+	GET_PERSON_PER_PAGE,
+	GET_AMOUNT_CHARACTERS
 } from "../actionTypes/exportActions";
 
 const initialState = {
-  cardList: [],
+	cardList: [],
+	amountCharacters: 0,
   isLoader: false,
   isError: false,
   isLoadCurrentPerson: false,
@@ -19,6 +23,8 @@ const initialState = {
   currentPerson: [{}],
   randomQuote: [{ quote: "" }],
   isList: false,
+  currentPage: 1,
+  personPerPage: 5,
 };
 
 function cardListReducer(state = initialState, action) {
@@ -70,6 +76,21 @@ function cardListReducer(state = initialState, action) {
         ...state,
         isList: !state.isList,
       };
+    case GET_CURRENT_PAGE:
+      return {
+        ...state,
+        currentPage: action.payload,
+      };
+    case GET_PERSON_PER_PAGE:
+      return {
+        ...state,
+        personPerPage: action.payload,
+			};
+			case GET_AMOUNT_CHARACTERS:
+				return {
+					...state,
+					amountCharacters: action.payload,
+				};
     default:
       return state;
   }

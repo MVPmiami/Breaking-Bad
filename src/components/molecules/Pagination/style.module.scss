@@ -1,0 +1,31 @@
+@import "./../../../assets/styles/style.scss";
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10rem;
+  height: 4rem;
+  width: 100%;
+  .leftSide {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 4rem;
+  }
+  .rightSide {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 16rem;
+    height: 4rem;
+  }
+}
+
+@media (max-width: 1215px) {
+  .wrapper {
+    flex-flow: column;
+    height: 8rem;
+    align-items: flex-start;
+  }
+}
