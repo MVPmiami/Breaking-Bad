@@ -20,15 +20,42 @@ const Pagination = ({
 
   if (pageNumbers.length > 6) {
     let lastPageNumber = pageNumbers[pageNumbers.length - 1];
-    pageNumbers = [
-      currentPage,
-      currentPage + 1,
-      currentPage + 2,
-      dots,
-      lastPageNumber,
-    ];
+    if (currentPage === 1) {
+      pageNumbers = [
+        currentPage,
+        currentPage + 1,
+        currentPage + 2,
+        dots,
+        lastPageNumber,
+      ];
+    } else if (currentPage === 2) {
+      pageNumbers = [
+        currentPage - 1,
+        currentPage,
+        currentPage + 1,
+        currentPage + 2,
+        dots,
+        lastPageNumber,
+      ];
+    } else {
+      pageNumbers = [
+        currentPage - 2,
+        currentPage - 1,
+        currentPage,
+        currentPage + 1,
+        currentPage + 2,
+        dots,
+        lastPageNumber,
+      ];
+    }
     if (currentPage >= lastPageNumber - 2) {
-      pageNumbers = [lastPageNumber - 2, lastPageNumber - 1, lastPageNumber];
+      pageNumbers = [
+        lastPageNumber - 4,
+        lastPageNumber - 3,
+        lastPageNumber - 2,
+        lastPageNumber - 1,
+        lastPageNumber,
+      ];
     }
   }
 

@@ -32,7 +32,7 @@ export const PersonsListContainer = () => {
 
   const paginate = (currentPage) => {
     currentPage === "..."
-      ? (currentPage = prevPageNumber)
+      ? dispatch(getCurrentPage(prevPageNumber + 3))
       : dispatch(getCurrentPage(currentPage));
   };
 
