@@ -24,6 +24,9 @@ export const PersonsListContainer = () => {
   const personPerPage = useSelector(
     (state) => state.cardListReducer.personPerPage
   );
+  const searchPersons = useSelector(
+    (state) => state.cardListReducer.searchPersons
+  );
 
   const lastPersonIndex = currentPage * personPerPage;
   const firstPersonIndex = lastPersonIndex - personPerPage;
@@ -65,7 +68,7 @@ export const PersonsListContainer = () => {
   return (
     <div>
       <CardList
-        persons={currentPersons}
+        persons={searchPersons.length ? searchPersons: currentPersons}
         isLoader={isLoader}
         isError={isError}
         isList={isList}

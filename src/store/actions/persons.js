@@ -11,8 +11,33 @@ import {
   GET_CURRENT_PAGE,
   GET_PERSON_PER_PAGE,
   GET_AMOUNT_CHARACTERS,
+  GET_SEARCH_NAME,
+  GET_SEARCH_PERSONS,
 } from "./../actionTypes/exportActions";
 import Repository from "../../repository";
+
+export const getSearchName = (payload) => {
+  return { type: GET_SEARCH_NAME, payload: payload };
+};
+
+export const setSearchPersons = (payload) => {
+  return { type: GET_SEARCH_PERSONS, payload: payload };
+};
+
+export const getSearchPersons = (name) => async (dispatch) => {
+  dispatch(changeStatusForLoader(true));
+  const { value, error } = await Repository.APISearchPersonByName.searchPerson(
+    name
+  );
+  console.log(error);
+  !value.length && name !== " "
+    ? dispatch(getErrorWhenUpload(true))
+    : dispatch(
+        setSearchPersons(value),
+        dispatch(changeStatusForLoader(false)),
+        dispatch(getErrorWhenUpload(false))
+      );
+};
 
 export const getPersonsList = (payload) => {
   return { type: LOAD_PERSONS, payload: payload };

@@ -4,6 +4,7 @@ import CardForList from "../../molecules/CardForList";
 import ErrorMessage from "../../atoms/Error";
 import Loader from "./../../atoms/Loader";
 import Toogle from "../../molecules/Toogle";
+import SearchField from "../SearchField/";
 
 const CardList = ({ persons, isLoader, isError, isList, toogle }) => {
   let cardsList = [];
@@ -30,6 +31,7 @@ const CardList = ({ persons, isLoader, isError, isList, toogle }) => {
       )));
   return (
     <div className={styles.wrapper}>
+      <SearchField />
       <Toogle isList={isList} toogle={toogle} />
       {isList ? (
         <div className={styles.headerList}>
@@ -39,7 +41,7 @@ const CardList = ({ persons, isLoader, isError, isList, toogle }) => {
         </div>
       ) : null}
       {isError ? (
-        <ErrorMessage messege="We have some problems dude!" />
+        <ErrorMessage messege="Person(s) not found!" />
       ) : !isLoader ? (
         !isList ? (
           <div className={styles.cardListGrid}>{cardsList}</div>

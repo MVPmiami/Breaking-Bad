@@ -1,0 +1,66 @@
+@import "./../../../assets/styles/style.scss";
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  margin-bottom: 5rem;
+  .searchForm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+    border-radius: 0.25rem;
+    width: 45rem;
+    height: 3.5rem;
+    padding-left: 1rem;
+    background-color: $CatalogBcgDisable;
+    .searchInput {
+      width: calc(100% - 1rem);
+      height: 100%;
+      background-color: $CatalogBcgDisable;
+      outline: none;
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 0.875rem;
+      line-height: 1.5rem;
+      color: $dataText;
+    }
+    .searchImg {
+      width: 0.938rem;
+      height: 0.938rem;
+    }
+    .searchBtn {
+      background-color: $CatalogBcgDisable;
+      width: 5rem;
+      height: 100%;
+      margin-left: 0.5rem;
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 1rem;
+      line-height: 1.5rem;
+      &:hover {
+        background-color: $CatalogBcgActive;
+        color: $CatalogBcgDisable;
+        cursor: pointer;
+      }
+    }
+  }
+  @media (max-width: 810px) {
+    .searchForm {
+      width: 21rem;
+    }
+  }
+  @media (max-width: 421px) {
+    .searchForm {
+      width: 14rem;
+      .searchImg {
+        width: 1rem;
+        height: 0.8rem;
+      }
+    }
+  }
+}
