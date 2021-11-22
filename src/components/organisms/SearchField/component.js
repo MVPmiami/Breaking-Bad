@@ -18,13 +18,10 @@ const SearchField = ({ searchName, name, searchPersons }) => {
           className={styles.searchBtn}
           onClick={(e) => {
             e.preventDefault();
-            if (document.querySelector("input").value === "") {
-              searchPersons(" ");
-              document.querySelector("input").value = "";
-            } else {
-              searchPersons(name);
-              document.querySelector("input").value = "";
-            }
+            e.target.parentNode.firstChild.value === ""
+              ? searchPersons(" ")
+              : searchPersons(name);
+            e.target.parentNode.firstChild.value = "";
           }}
         >
           Search

@@ -7,35 +7,4 @@
   justify-content: center;
   align-items: center;
   background-color: $rootBcg;
-  .linkToCatalog {
-    width: 9rem;
-    display: flex;
-    height: 1.5rem;
-    align-items: center;
-    justify-content: space-between;
-    text-decoration: none;
-    color: $dataText;
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 1rem;
-    line-height: 1.5rem;
-    margin: 3rem 0;
-    opacity: 0.7;
-    &:hover {
-      opacity: 1;
-    }
-  }
-  .arrowBack {
-    background-image: url("./../../../assets/img/arrowBack.png");
-    width: 1rem;
-    height: 1rem;
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
-  @media (max-width: 490px) {
-    .linkToCatalog {
-      margin: 3rem 0.75rem;
-    }
-  }
 }

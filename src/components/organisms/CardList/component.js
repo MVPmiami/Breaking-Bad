@@ -41,7 +41,9 @@ const CardList = ({ persons, isLoader, isError, isList, toogle }) => {
         </div>
       ) : null}
       {isError ? (
-        <ErrorMessage messege="Person(s) not found!" />
+        <>
+          <ErrorMessage messege="Person(s) not found!" />
+        </>
       ) : !isLoader ? (
         !isList ? (
           <div className={styles.cardListGrid}>{cardsList}</div>

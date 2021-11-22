@@ -29,7 +29,6 @@ export const getSearchPersons = (name) => async (dispatch) => {
   const { value, error } = await Repository.APISearchPersonByName.searchPerson(
     name
   );
-  console.log(error);
   !value.length && name !== " "
     ? dispatch(getErrorWhenUpload(true))
     : dispatch(

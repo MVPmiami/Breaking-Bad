@@ -2,12 +2,15 @@ import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import CardList from "./component";
 import Pagination from "../../molecules/Pagination";
+import LinkToCatalog from "./../../atoms/LinkToCatalog";
 import {
   loadPersonList,
   toogleList,
   getCurrentPage,
   getAmountCards,
   getAmountCharacters,
+  getErrorWhenUpload,
+  setSearchPersons,
 } from "./../../../store/actions/persons";
 
 export const PersonsListContainer = () => {
@@ -60,6 +63,12 @@ export const PersonsListContainer = () => {
     dispatch(toogleList());
   };
 
+  const cleanData = () => {
+    dispatch(getErrorWhenUpload(false));
+    dispatch(loadPersonList(personPerPage, firstPersonIndex));
+    dispatch(setSearchPersons([]));
+  };
+
   useEffect(() => {
     dispatch(loadPersonList(personPerPage, firstPersonIndex));
     dispatch(getAmountCharacters());
@@ -68,21 +77,25 @@ export const PersonsListContainer = () => {
   return (
     <div>
       <CardList
-        persons={searchPersons.length ? searchPersons: currentPersons}
+        persons={searchPersons.length ? searchPersons : currentPersons}
         isLoader={isLoader}
         isError={isError}
         isList={isList}
         toogle={toogle}
       />
-      <Pagination
-        personPerPage={personPerPage}
-        totalPersons={amountCharacters}
-        paginate={paginate}
-        currentPage={currentPage}
-        paginateToNextPage={paginateToNextPage}
-        paginateToPrevPage={paginateToPrevPage}
-        changeAmountCards={changeAmountCards}
-      />
+      {searchPersons.length || isError ? (
+        <LinkToCatalog cleanData={cleanData} />
+      ) : (
+        <Pagination
+          personPerPage={personPerPage}
+          totalPersons={amountCharacters}
+          paginate={paginate}
+          currentPage={currentPage}
+          paginateToNextPage={paginateToNextPage}
+          paginateToPrevPage={paginateToPrevPage}
+          changeAmountCards={changeAmountCards}
+        />
+      )}
     </div>
   );
 };
