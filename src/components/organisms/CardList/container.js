@@ -11,6 +11,7 @@ import {
   getAmountCharacters,
   getErrorWhenUpload,
   setSearchPersons,
+  getSearchName,
 } from "./../../../store/actions/persons";
 
 export const PersonsListContainer = () => {
@@ -67,6 +68,7 @@ export const PersonsListContainer = () => {
     dispatch(getErrorWhenUpload(false));
     dispatch(loadPersonList(personPerPage, firstPersonIndex));
     dispatch(setSearchPersons([]));
+    dispatch(getSearchName(""));
   };
 
   useEffect(() => {
