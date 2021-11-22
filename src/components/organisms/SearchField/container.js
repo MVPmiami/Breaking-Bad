@@ -13,6 +13,8 @@ export const SearchFieldContainer = () => {
   const searchName = (name) => {
     if (name) {
       dispatch(getSearchName(name.trim().toLowerCase()));
+    } else {
+      dispatch(getSearchName(""));
     }
   };
 

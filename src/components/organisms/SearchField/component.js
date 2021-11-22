@@ -19,6 +19,7 @@ const SearchField = ({ searchName, name, searchPersons }) => {
           onClick={(e) => {
             e.preventDefault();
             searchPersons(name);
+            searchName("");
             e.target.parentNode.firstChild.value = "";
           }}
         >
