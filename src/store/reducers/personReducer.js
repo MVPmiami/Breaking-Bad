@@ -9,13 +9,15 @@ import {
   GET_QUOTE,
   TOOGLE_LIST,
   GET_CURRENT_PAGE,
-	GET_PERSON_PER_PAGE,
-	GET_AMOUNT_CHARACTERS
+  GET_PERSON_PER_PAGE,
+  GET_AMOUNT_CHARACTERS,
+  GET_SEARCH_NAME,
+  GET_SEARCH_PERSONS,
 } from "../actionTypes/exportActions";
 
 const initialState = {
-	cardList: [],
-	amountCharacters: 0,
+  cardList: [],
+  amountCharacters: 0,
   isLoader: false,
   isError: false,
   isLoadCurrentPerson: false,
@@ -25,6 +27,8 @@ const initialState = {
   isList: false,
   currentPage: 1,
   personPerPage: 5,
+  searchName: "",
+  searchPersons: [],
 };
 
 function cardListReducer(state = initialState, action) {
@@ -33,6 +37,12 @@ function cardListReducer(state = initialState, action) {
       return {
         ...state,
         cardList: action.payload,
+      };
+    }
+    case GET_SEARCH_PERSONS: {
+      return {
+        ...state,
+        searchPersons: action.payload,
       };
     }
     case GET_ERROR_WHEN_UPLOAD_CHARACTER_LIST:
@@ -85,12 +95,17 @@ function cardListReducer(state = initialState, action) {
       return {
         ...state,
         personPerPage: action.payload,
-			};
-			case GET_AMOUNT_CHARACTERS:
-				return {
-					...state,
-					amountCharacters: action.payload,
-				};
+      };
+    case GET_AMOUNT_CHARACTERS:
+      return {
+        ...state,
+        amountCharacters: action.payload,
+      };
+    case GET_SEARCH_NAME:
+      return {
+        ...state,
+        searchName: action.payload,
+      };
     default:
       return state;
   }
