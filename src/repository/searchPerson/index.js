@@ -6,15 +6,10 @@ class searchPersonByName {
       value: null,
       error: null,
     };
-    if (name === " ") {
-      name = "allpersons";
-    }
 
     try {
       let response = await axios.get(
-        `https://www.breakingbadapi.com/api/characters?name=${name
-          .toLowerCase()
-          .trim()}`
+        `https://www.breakingbadapi.com/api/characters?name=${name}`
       );
       result.value = response.data;
     } catch (error) {

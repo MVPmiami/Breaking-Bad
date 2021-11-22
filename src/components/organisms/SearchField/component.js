@@ -18,9 +18,7 @@ const SearchField = ({ searchName, name, searchPersons }) => {
           className={styles.searchBtn}
           onClick={(e) => {
             e.preventDefault();
-            e.target.parentNode.firstChild.value === ""
-              ? searchPersons(" ")
-              : searchPersons(name);
+            searchPersons(name);
             e.target.parentNode.firstChild.value = "";
           }}
         >

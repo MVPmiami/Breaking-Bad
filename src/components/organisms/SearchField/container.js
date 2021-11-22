@@ -11,11 +11,15 @@ export const SearchFieldContainer = () => {
   const name = useSelector((state) => state.cardListReducer.searchName);
 
   const searchName = (name) => {
-    dispatch(getSearchName(name));
+    if (name) {
+      dispatch(getSearchName(name.trim().toLowerCase()));
+    }
   };
 
   const searchPersons = (name) => {
-    dispatch(getSearchPersons(name));
+    if (name) {
+      dispatch(getSearchPersons(name.trim().toLowerCase()));
+    }
   };
 
   return (
