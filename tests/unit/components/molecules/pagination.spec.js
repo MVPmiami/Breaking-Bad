@@ -1,4 +1,3 @@
-import "jsdom-global/register";
 import React from "react";
 import Pagination from "../../../../src/components/molecules/Pagination";
 
