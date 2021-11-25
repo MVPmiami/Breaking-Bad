@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render PageNumberBtn component should contain .cardWrapper wrapper 1`] = `
+<Link
+  className="link"
+  to="/person/undefined"
+>
+  <div
+    className="cardWrapper"
+  >
+    <t
+      afterLoad={[Function]}
+      beforeLoad={[Function]}
+      className="avatar"
+      delayMethod="throttle"
+      delayTime={300}
+      effect=""
+      placeholderSrc={null}
+      threshold={100}
+      useIntersectionObserver={true}
+      visibleByDefault={false}
+      wrapperClassName=""
+    />
+    <div
+      className="personContent"
+    >
+      <div
+        className="status"
+      />
+      <div
+        className="name"
+      />
+      <div
+        className="data"
+      />
+    </div>
+  </div>
+</Link>
+`;

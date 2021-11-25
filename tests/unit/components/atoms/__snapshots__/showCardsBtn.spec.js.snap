@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render ShowCardsBtn component should contain .amountCards wrapper 1`] = `
+<button
+  className="amountCards active"
+  onClick={[Function]}
+/>
+`;

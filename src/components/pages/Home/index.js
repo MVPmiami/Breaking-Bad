@@ -1,3 +1,4 @@
+import React from "react";
 import styles from "./style.module.scss";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import img from "./../../../assets/img/mainPicture.webp";

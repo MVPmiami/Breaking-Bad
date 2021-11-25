@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render ShowCards component should contain .header wrapper 1`] = `
+<Fragment>
+  <span
+    className="header"
+  >
+    Show cards:
+  </span>
+  <ShowCardsBtn
+    amount={5}
+    key="5"
+  />
+  <ShowCardsBtn
+    amount={10}
+    key="10"
+  />
+  <ShowCardsBtn
+    amount={15}
+    key="15"
+  />
+  <ShowCardsBtn
+    amount={20}
+    key="20"
+  />
+</Fragment>
+`;

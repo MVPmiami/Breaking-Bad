@@ -1,8 +1,13 @@
+import React from "react";
 import styles from "./style.module.scss";
 
-const CatalogBtn = ({isActiveBtn}) => {
+const CatalogBtn = ({ isActiveBtn }) => {
   return (
-    <div className={`${styles.btnWrapper} ${isActiveBtn ? styles.active : styles.disable}`}>
+    <div
+      className={`${styles.btnWrapper} ${
+        isActiveBtn ? styles.active : styles.disable
+      }`}
+    >
       <div className={styles.burger}>
         <span></span>
       </div>

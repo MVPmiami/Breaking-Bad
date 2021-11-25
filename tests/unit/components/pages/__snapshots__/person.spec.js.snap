@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render Person component should contain .currentPage wrapper 1`] = `
+<div
+  className="currentPage"
+>
+  <div>
+    <linkToCatalog />
+    <PersonFullCardContainer />
+  </div>
+</div>
+`;
