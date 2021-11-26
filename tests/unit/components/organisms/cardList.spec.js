@@ -1,5 +1,7 @@
 import React from "react";
 import CardList from "../../../../src/components/organisms/CardList/component";
+import cardListReducer from "../../../../src/store/reducers/personReducer";
+
 
 const setUp = (props) => shallow(<CardList {...props} />);
 

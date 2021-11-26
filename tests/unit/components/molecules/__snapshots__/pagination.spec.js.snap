@@ -48,3 +48,52 @@ exports[`should render Pagination component should contain .cardWrapper wrapper 
   </div>
 </div>
 `;
+
+exports[`should render more btns should contain 10 btns 1`] = `
+<div
+  className="wrapper"
+>
+  <div
+    className="leftSide"
+  >
+    <PageNumberBtn
+      currentPage={1}
+      key="1"
+      numberPage={1}
+    />
+    <PageNumberBtn
+      currentPage={1}
+      key="2"
+      numberPage={2}
+    />
+    <PageNumberBtn
+      currentPage={1}
+      key="3"
+      numberPage={3}
+    />
+    <PageNumberBtn
+      currentPage={1}
+      key="..."
+      numberPage="..."
+    />
+    <PageNumberBtn
+      currentPage={1}
+      key="10"
+      numberPage={10}
+    />
+    <ArrowNavigation
+      currentPage={1}
+      paginateToNextPage={[MockFunction]}
+      paginateToPrevPage={[MockFunction]}
+    />
+  </div>
+  <div
+    className="rightSide"
+  >
+    <ShowCards
+      changeAmountCards={[MockFunction]}
+      personPerPage={10}
+    />
+  </div>
+</div>
+`;
