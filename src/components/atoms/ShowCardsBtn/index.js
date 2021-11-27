@@ -10,7 +10,7 @@ const ShowCardsBtn = ({ personPerPage, changeAmountCards, amount }) => {
       onClick={() => {
         changeAmountCards(amount);
       }}
-    >
+    data-test-showBtn = {`show-${amount}`}>
       {amount}
     </button>
   );

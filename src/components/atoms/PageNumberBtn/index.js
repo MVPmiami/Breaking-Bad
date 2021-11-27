@@ -11,6 +11,7 @@ const PageNumberBtn = ({ currentPage, numberPage, paginate }) => {
       onClick={() => {
         paginate(numberPage);
       }}
+			data-test-pageNumBtn = {`pageNumBtn-${numberPage}`}
     >
       {numberPage}
     </button>
