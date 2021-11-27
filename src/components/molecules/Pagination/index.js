@@ -1,3 +1,4 @@
+import React from "react";
 import styles from "./style.module.scss";
 import PageNumberBtn from "../../atoms/PageNumberBtn";
 import ArrowNavigation from "../../atoms/ArrowNavigation";
@@ -67,6 +68,7 @@ const Pagination = ({
             currentPage={currentPage}
             numberPage={numberPage}
             paginate={paginate}
+            key={numberPage}
           />
         ))}
         <ArrowNavigation

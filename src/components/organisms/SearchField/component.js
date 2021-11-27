@@ -1,3 +1,4 @@
+import React from "react";
 import styles from "./style.module.scss";
 import img from "./../../../assets/img/search.png";
 

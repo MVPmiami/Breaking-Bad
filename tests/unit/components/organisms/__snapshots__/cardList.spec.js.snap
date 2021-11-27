@@ -1,0 +1,156 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render CardList component with CadrForList should contain CardForList 1`] = `
+<div
+  className="wrapper"
+>
+  <SearchFieldContainer />
+  <Toogle
+    isList={true}
+  />
+  <div
+    className="headerList"
+  >
+    <h2
+      className="status"
+    >
+      Status
+    </h2>
+    <h2
+      className="name"
+    >
+      Name
+    </h2>
+    <h2
+      className="birth"
+    >
+      date of birth
+    </h2>
+  </div>
+  <div
+    className="cardList"
+  >
+    <CardForList
+      birthday="09-07-1958"
+      id={1}
+      img="https://images.amcnetworks.com/amc.com/wp-content/uploads/2015/04/cast_bb_700x1000_walter-white-lg.jpg"
+      key="1"
+      name="Walter White"
+      status="Presumed dead"
+    />
+    <CardForList
+      birthday="09-24-1984"
+      id={2}
+      img="https://vignette.wikia.nocookie.net/breakingbad/images/9/95/JesseS5.jpg/revision/latest?cb=20120620012441"
+      key="2"
+      name="Jesse Pinkman"
+      status="Alive"
+    />
+    <CardForList
+      birthday="08-11-1970"
+      id={3}
+      img="https://s-i.huffpost.com/gen/1317262/images/o-ANNA-GUNN-facebook.jpg"
+      key="3"
+      name="Skyler White"
+      status="Alive"
+    />
+    <CardForList
+      birthday="07-08-1993"
+      id={4}
+      img="https://media1.popsugar-assets.com/files/thumbor/WeLUSvbAMS_GL4iELYAUzu7Bpv0/fit-in/1024x1024/filters:format_auto-!!-:strip_icc-!!-/2018/01/12/910/n/1922283/fb758e62b5daf3c9_TCDBRBA_EC011/i/RJ-Mitte-Walter-White-Jr.jpg"
+      key="4"
+      name="Walter White Jr."
+      status="Alive"
+    />
+    <CardForList
+      birthday="Unknown"
+      id={5}
+      img="https://vignette.wikia.nocookie.net/breakingbad/images/b/b7/HankS5.jpg/revision/latest/scale-to-width-down/700?cb=20120620014136"
+      key="5"
+      name="Henry Schrader"
+      status="Deceased"
+    />
+  </div>
+</div>
+`;
+
+exports[`should render CardList component with Card should contain Card 1`] = `
+<div
+  className="wrapper"
+>
+  <SearchFieldContainer />
+  <Toogle
+    isList={false}
+  />
+  <div
+    className="cardListGrid"
+  >
+    <Card
+      birthday="09-07-1958"
+      id={1}
+      img="https://images.amcnetworks.com/amc.com/wp-content/uploads/2015/04/cast_bb_700x1000_walter-white-lg.jpg"
+      key="1"
+      name="Walter White"
+      status="Presumed dead"
+    />
+    <Card
+      birthday="09-24-1984"
+      id={2}
+      img="https://vignette.wikia.nocookie.net/breakingbad/images/9/95/JesseS5.jpg/revision/latest?cb=20120620012441"
+      key="2"
+      name="Jesse Pinkman"
+      status="Alive"
+    />
+    <Card
+      birthday="08-11-1970"
+      id={3}
+      img="https://s-i.huffpost.com/gen/1317262/images/o-ANNA-GUNN-facebook.jpg"
+      key="3"
+      name="Skyler White"
+      status="Alive"
+    />
+    <Card
+      birthday="07-08-1993"
+      id={4}
+      img="https://media1.popsugar-assets.com/files/thumbor/WeLUSvbAMS_GL4iELYAUzu7Bpv0/fit-in/1024x1024/filters:format_auto-!!-:strip_icc-!!-/2018/01/12/910/n/1922283/fb758e62b5daf3c9_TCDBRBA_EC011/i/RJ-Mitte-Walter-White-Jr.jpg"
+      key="4"
+      name="Walter White Jr."
+      status="Alive"
+    />
+    <Card
+      birthday="Unknown"
+      id={5}
+      img="https://vignette.wikia.nocookie.net/breakingbad/images/b/b7/HankS5.jpg/revision/latest/scale-to-width-down/700?cb=20120620014136"
+      key="5"
+      name="Henry Schrader"
+      status="Deceased"
+    />
+  </div>
+</div>
+`;
+
+exports[`should render CardList component with ErrorMessage should contain ErrorMessage 1`] = `
+<div
+  className="wrapper"
+>
+  <SearchFieldContainer />
+  <Toogle
+    isList={false}
+  />
+  <ErrorMessage
+    messege="Person(s) not found!"
+  />
+</div>
+`;
+
+exports[`should render CardList component with Loader should contain Loader 1`] = `
+<div
+  className="wrapper"
+>
+  <SearchFieldContainer />
+  <Toogle
+    isList={false}
+  />
+  <Loader />
+</div>
+`;

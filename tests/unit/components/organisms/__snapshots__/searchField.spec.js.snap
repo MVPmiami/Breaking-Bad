@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render Toogle component should contain .headerCatalog wrapper 1`] = `
+<div
+  className="wrapper"
+>
+  <form
+    className="searchForm"
+  >
+    <input
+      className="searchInput"
+      onChange={[Function]}
+      placeholder="Search"
+      type="text"
+    />
+    <img
+      className="searchImg"
+      src="test-file-stub"
+    />
+    <button
+      className="searchBtn"
+      onClick={[Function]}
+    >
+      Search
+    </button>
+  </form>
+</div>
+`;

@@ -1,3 +1,4 @@
+import React from "react";
 import styles from "./style.module.scss";
 import FullCard from "../../organisms/FullCard";
 import LinkToCatalog from "./../../atoms/LinkToCatalog";

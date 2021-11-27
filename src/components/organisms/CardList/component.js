@@ -1,3 +1,4 @@
+import React from "react";
 import styles from "./style.module.scss";
 import Card from "./../../molecules/Card/";
 import CardForList from "../../molecules/CardForList";

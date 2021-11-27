@@ -1,3 +1,4 @@
+import React from "react";
 import styles from "./style.module.scss";
 import ShowCardsBtn from "../../atoms/ShowCardsBtn";
 
@@ -8,8 +9,9 @@ const ShowCards = ({ personPerPage, changeAmountCards }) => {
       personPerPage={personPerPage}
       changeAmountCards={changeAmountCards}
       amount={amount}
+      key={amount}
     />
-	));
+  ));
   return (
     <>
       <span className={styles.header}>Show cards:</span>
