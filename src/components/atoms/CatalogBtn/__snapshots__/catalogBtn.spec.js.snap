@@ -3,6 +3,7 @@
 exports[`should render CatalogBtn component should contain .btnWrapper wrapper 1`] = `
 <div
   className="btnWrapper disable"
+  data-test-catalogBTN="catalogBTN"
 >
   <div
     className="burger"

@@ -3,6 +3,7 @@
 exports[`should render Home component should contain .homePage wrapper 1`] = `
 <div
   className="homePage"
+  data-test-homePage="homePage"
 >
   <main>
     <t

@@ -12,7 +12,7 @@ const linkToCatalog = ({ cleanData }) => {
             onClick={() => {
               cleanData();
             }}
-          data-test-arrBackBtn = "arrBackBtn"></div>
+          data-test-arr-back-btn = "arr-back-btn"></div>
           <p
             onClick={() => {
               cleanData();

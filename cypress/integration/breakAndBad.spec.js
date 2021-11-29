@@ -1,7 +1,7 @@
 describe("test BB app", ()=> {
 	it("renders correctly home component", () => {
 		cy.visit("/");
-		cy.get("[data-test-homePage = homePage ]");
+		cy.get("[data-test-home-page = home-page ]");
 	})
 
 	it("renders correctly header component", () => {
@@ -16,7 +16,7 @@ describe("test BB app", ()=> {
 
 	it("check btn to catalog", () => {
 		cy.visit("/");
-		cy.get("[data-test-catalogBTN = catalogBTN]").click();
+		cy.get("[data-test-catalogbtn = catalog-btn]").click();
 		cy.location("pathname").should("eq", "/catalog")
 	})
 
@@ -36,7 +36,7 @@ describe("test catalogBtn", ()=> {
 
 	it("check btn to catalog", () => {
 		cy.visit("/");
-		cy.get("[data-test-catalogBTN = catalogBTN]").click();
+		cy.get("[data-test-catalogbtn = catalog-btn]").click();
 		cy.location("pathname").should("eq", "/catalog")
 	})
 
@@ -52,7 +52,7 @@ describe("check input", ()=> {
 		cy.visit("/catalog");
 		cy.get("input").type("Walter").type("{enter}")
     cy.get("[data-test-cards=cards] > a").should("have.length", 2);
-		cy.get("[data-test-arrBackBtn = arrBackBtn]").click();
+		cy.get("[data-test-arr-back-btn = arr-back-btn]").click();
 		cy.get("[data-test-cards=cards] > a").should("have.length", 5);
 	})
 })
@@ -60,13 +60,13 @@ describe("check input", ()=> {
 describe("check grid or list style for cards", ()=> {
 	it("check correctly render list", () => {
 		cy.visit("/catalog");
-		cy.get("[data-test-toList = toList]").click();
+		cy.get("[data-test-to-list = to-list]").click();
 	})
 
 		it("check correctly render grid", () => {
 		cy.visit("/catalog");
-		cy.get("[data-test-toList = toList]").click();
-		cy.get("[data-test-toGrid = toGrid]").click();
+		cy.get("[data-test-to-list = to-list]").click();
+		cy.get("[data-test-to-grid = to-grid]").click();
 	})
 })
 
@@ -81,7 +81,7 @@ describe("check FullCard component", ()=> {
 describe("check showCards component", ()=> {
 	it("check correctly render cards", () => {
 		cy.visit("/catalog");
-		cy.get("[data-test-showBtn = show-10").click();
+		cy.get("[data-test-show-btn = show-10").click();
 		cy.get("[data-test-cards=cards] > a").should("have.length", 10);
 	})
 })
@@ -89,7 +89,7 @@ describe("check showCards component", ()=> {
 describe("check pagination ", ()=> {
 	it("check correctly work pagination", () => {
 		cy.visit("/catalog");
-		cy.get("[data-test-pageNumBtn = pageNumBtn-2]").click();
+		cy.get("[data-test-page-num-btn = page-num-btn-2]").click();
 		cy.get("[href='/person/6']").find("div").find("div").contains("Marie Schrader")
 	})
 })

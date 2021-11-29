@@ -5,7 +5,7 @@ import img from "./../../../assets/img/mainPicture.webp";
 
 const Home = () => {
   return (
-    <div className={styles.homePage} data-test-homePage="homePage">
+    <div className={styles.homePage} data-test-home-page="home-page">
       <main>
         <LazyLoadImage src={img} className={styles.img}></LazyLoadImage>
       </main>

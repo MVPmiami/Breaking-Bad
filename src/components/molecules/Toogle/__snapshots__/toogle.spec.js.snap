@@ -14,6 +14,7 @@ exports[`should render Toogle component should contain .headerCatalog wrapper 1`
   >
     <div
       className="list"
+      data-test-toList="toList"
     >
       <div
         className="rectangle1 "
@@ -24,6 +25,7 @@ exports[`should render Toogle component should contain .headerCatalog wrapper 1`
     </div>
     <div
       className="grid"
+      data-test-toGrid="toGrid"
     >
       <div
         className="rectangle2 active"
