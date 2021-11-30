@@ -7,7 +7,7 @@ import { HashRouter, Route, Switch, Redirect } from "react-router-dom";
 
 function App() {
   return (
-    <HashRouter basename={process.env.PUBLIC_URL}>
+    <HashRouter>
       <div>
         <Header />
         <Switch>
