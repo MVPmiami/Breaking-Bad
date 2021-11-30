@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render Loader component should contain .ldsEllipsis wrapper 1`] = `
+<div
+  className="ldsEllipsis"
+>
+  <div />
+  <div />
+  <div />
+  <div />
+</div>
+`;

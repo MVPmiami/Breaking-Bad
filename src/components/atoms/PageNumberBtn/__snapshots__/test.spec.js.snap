@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render PageNumberBtn component should contain .pageElement wrapper 1`] = `
+<button
+  className="pageElement active"
+  data-test-page-num-btn="page-num-btn-undefined"
+  onClick={[Function]}
+/>
+`;

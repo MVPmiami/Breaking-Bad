@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render CatalogBtn component should contain .btnWrapper wrapper 1`] = `
+<div
+  className="btnWrapper disable"
+  data-test-catalogbtn="catalog-btn"
+>
+  <div
+    className="burger"
+  >
+    <span />
+  </div>
+  <div
+    className="text"
+  >
+    Catalog
+  </div>
+</div>
+`;

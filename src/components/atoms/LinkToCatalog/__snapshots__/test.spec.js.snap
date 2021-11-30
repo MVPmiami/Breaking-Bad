@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render linkToCatalog component should contain .currentPage wrapper 1`] = `
+<div
+  className="currentPage"
+>
+  <div>
+    <Link
+      className="linkToCatalog"
+      to="/catalog"
+    >
+      <div
+        className="arrowBack"
+        data-test-arr-back-btn="arr-back-btn"
+        onClick={[Function]}
+      />
+      <p
+        onClick={[Function]}
+      >
+        Back to Catalog
+      </p>
+    </Link>
+  </div>
+</div>
+`;
+
+exports[`should render linkToCatalog component should contain .linkToCatalog wrapper 1`] = `
+<div
+  className="currentPage"
+>
+  <div>
+    <Link
+      className="linkToCatalog"
+      to="/catalog"
+    >
+      <div
+        className="arrowBack"
+        data-test-arr-back-btn="arr-back-btn"
+        onClick={[Function]}
+      />
+      <p
+        onClick={[Function]}
+      >
+        Back to Catalog
+      </p>
+    </Link>
+  </div>
+</div>
+`;

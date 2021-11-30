@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render Catalog component should contain .catalogPage wrapper 1`] = `
+<main
+  className="catalogPage"
+>
+  <main>
+    <PersonsListContainer />
+  </main>
+</main>
+`;
