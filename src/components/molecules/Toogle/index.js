@@ -6,7 +6,7 @@ const Toogle = ({ isList, toogle }) => {
     <div className={styles.headerCatalog}>
       <h2 className={styles.headerText}>Catalog</h2>
       <div className={styles.toogles}>
-        <div className={styles.list} onClick={toogle}>
+        <div className={styles.list} onClick={toogle} data-test-to-list = "to-list">
           <div
             className={`${styles.rectangle1} ${isList ? styles.active : ""}`}
           ></div>
@@ -14,7 +14,7 @@ const Toogle = ({ isList, toogle }) => {
             className={`${styles.rectangle1} ${isList ? styles.active : ""}`}
           ></div>
         </div>
-        <div className={styles.grid} onClick={toogle}>
+        <div className={styles.grid} onClick={toogle} data-test-to-grid = "to-grid">
           <div
             className={`${styles.rectangle2} ${!isList ? styles.active : ""}`}
           ></div>

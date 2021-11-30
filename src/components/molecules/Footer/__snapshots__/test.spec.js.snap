@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render Footer component should contain .cardWrapper wrapper 1`] = `
+<footer>
+  <span
+    className="year"
+  >
+    2021
+  </span>
+  <a
+    className="developer"
+    href="https://github.com/MVPmiami"
+  >
+    @MVPmiami
+  </a>
+</footer>
+`;

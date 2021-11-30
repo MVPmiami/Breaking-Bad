@@ -29,6 +29,7 @@ exports[`should render CardList component with CadrForList should contain CardFo
   </div>
   <div
     className="cardList"
+    data-test-cards="cards"
   >
     <CardForList
       birthday="09-07-1958"
@@ -84,6 +85,7 @@ exports[`should render CardList component with Card should contain Card 1`] = `
   />
   <div
     className="cardListGrid"
+    data-test-cards="cards"
   >
     <Card
       birthday="09-07-1958"

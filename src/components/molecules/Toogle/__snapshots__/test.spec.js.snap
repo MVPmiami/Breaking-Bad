@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render Toogle component should contain .headerCatalog wrapper 1`] = `
+<div
+  className="headerCatalog"
+>
+  <h2
+    className="headerText"
+  >
+    Catalog
+  </h2>
+  <div
+    className="toogles"
+  >
+    <div
+      className="list"
+      data-test-to-list="to-list"
+    >
+      <div
+        className="rectangle1 "
+      />
+      <div
+        className="rectangle1 "
+      />
+    </div>
+    <div
+      className="grid"
+      data-test-to-grid="to-grid"
+    >
+      <div
+        className="rectangle2 active"
+      />
+      <div
+        className="rectangle2 active"
+      />
+      <div
+        className="rectangle2 active"
+      />
+      <div
+        className="rectangle2 active"
+      />
+    </div>
+  </div>
+</div>
+`;

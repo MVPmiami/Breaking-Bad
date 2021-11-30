@@ -7,7 +7,7 @@ const CatalogBtn = ({ isActiveBtn }) => {
       className={`${styles.btnWrapper} ${
         isActiveBtn ? styles.active : styles.disable
       }`}
-    >
+    data-test-catalogbtn = "catalog-btn">
       <div className={styles.burger}>
         <span></span>
       </div>

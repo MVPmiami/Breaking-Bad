@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render CardForList component should contain .cardWrapper wrapper 1`] = `
+<Link
+  className="link"
+  to="/person/undefined"
+>
+  <div
+    className="cardWrapper"
+  >
+    <div
+      className="leftSide"
+    >
+      <t
+        afterLoad={[Function]}
+        beforeLoad={[Function]}
+        className="avatar"
+        delayMethod="throttle"
+        delayTime={300}
+        effect=""
+        placeholderSrc={null}
+        threshold={100}
+        useIntersectionObserver={true}
+        visibleByDefault={false}
+        wrapperClassName=""
+      />
+      <div
+        className="status"
+      />
+    </div>
+    <div
+      className="personContent"
+    >
+      <div
+        className="name"
+      />
+      <div
+        className="data"
+      />
+    </div>
+  </div>
+</Link>
+`;

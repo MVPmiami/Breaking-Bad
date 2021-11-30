@@ -3,6 +3,7 @@
 exports[`should render ShowCardsBtn component should contain .amountCards wrapper 1`] = `
 <button
   className="amountCards active"
+  data-test-showBtn="show-undefined"
   onClick={[Function]}
 />
 `;

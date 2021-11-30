@@ -47,9 +47,9 @@ const CardList = ({ persons, isLoader, isError, isList, toogle }) => {
         </>
       ) : !isLoader ? (
         !isList ? (
-          <div className={styles.cardListGrid}>{cardsList}</div>
+          <div className={styles.cardListGrid} data-test-cards="cards">{cardsList}</div>
         ) : (
-          <div className={styles.cardList}>{cardsList}</div>
+          <div className={styles.cardList} data-test-cards="cards">{cardsList}</div>
         )
       ) : (
         <Loader />
