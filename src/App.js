@@ -3,11 +3,11 @@ import Person from "./components/pages/Person";
 import Catalog from "./components/pages/Catalog";
 import Header from "./components/organisms/Header/";
 import Footer from "./components/molecules/Footer";
-import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
+import { HashRouter, Route, Switch, Redirect } from "react-router-dom";
 
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter basename={process.env.PUBLIC_URL}>
       <div>
         <Header />
         <Switch>
@@ -18,7 +18,7 @@ function App() {
         </Switch>
         <Footer />
       </div>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
